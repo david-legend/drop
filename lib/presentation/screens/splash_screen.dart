@@ -40,10 +40,12 @@ class _SplashScreenState extends State<SplashScreen> {
             Container(
               margin: EdgeInsets.symmetric(horizontal: 75),
               child: Center(
-                  child: Placeholder(
-                fallbackWidth: 150,
-                fallbackHeight: 150,
-              )),
+                child: Placeholder(
+                  fallbackWidth: 150,
+                  fallbackHeight: 150,
+                  strokeWidth: 1,
+                ),
+              ),
             ),
           ],
         ),

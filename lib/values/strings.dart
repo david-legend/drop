@@ -18,6 +18,9 @@ class StringConst {
 
   //Registration / Login
   static const String LOG_IN = "Log in";
+  static const String LOG_IN_2 = "Login";
+  static const String LOG_IN_WITH_GOOGLE = "Login with Google";
+  static const String LOG_IN_WITH_FACEBOOK = "Login with Facebook";
   static const String SIGN_UP = "Sign up";
 
   //hint_text
@@ -25,6 +28,7 @@ class StringConst {
   static const String PASSWORD = "Password";
   static const String CONFIRM_PASSWORD = "Confirm Password";
   static const String EMAIL = "Email";
+  static const String EMAIL_2 = "E-mail";
 
   static const String FULL_NAME_HINT_TEXT = "Eleanor Pena";
   static const String PASSWORD_HINT_TEXT = "********";

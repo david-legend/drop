@@ -27,8 +27,8 @@ class AppTheme {
   static const ColorScheme lightColorScheme = ColorScheme(
     primary: AppColors.primaryColor,
     primaryVariant: AppColors.secondaryColor,
-    secondary: AppColors.accentColor,
-    secondaryVariant: AppColors.accentColor,
+    secondary: AppColors.accentPrimaryColor,
+    secondaryVariant: AppColors.accentPrimaryColor,
     background: Colors.white,
     surface: Color(0xFFFAFBFB),
     onBackground: AppColors.white100,
@@ -86,27 +86,29 @@ class AppTheme {
     headline6: TextStyle(
       fontFamily: StringConst.FONT_FAMILY,
       fontSize: Sizes.TEXT_SIZE_20,
-      color: AppColors.black50,
+      color: AppColors.primaryText,
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
-    subtitle1: GoogleFonts.poppins(
+    subtitle1: TextStyle(
+      fontFamily: StringConst.FONT_FAMILY,
       fontSize: Sizes.TEXT_SIZE_16,
       color: AppColors.primaryText,
-      fontWeight: _semiBold,
+      fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
-    subtitle2: GoogleFonts.poppins(
+    subtitle2: TextStyle(
+      fontFamily: StringConst.FONT_FAMILY,
       fontSize: Sizes.TEXT_SIZE_14,
       color: AppColors.primaryText,
-      fontWeight: _semiBold,
+      fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
     bodyText1: TextStyle(
       fontFamily: StringConst.FONT_FAMILY,
       fontSize: Sizes.TEXT_SIZE_16,
       color: AppColors.primaryText,
-      fontWeight: _light,
+      fontWeight: _regular,
       fontStyle: FontStyle.normal,
     ),
     bodyText2: TextStyle(
@@ -116,16 +118,17 @@ class AppTheme {
       fontWeight: _light,
       fontStyle: FontStyle.normal,
     ),
-    button: GoogleFonts.poppins(
+    button: TextStyle(
+      fontFamily: StringConst.FONT_FAMILY,
       fontSize: Sizes.TEXT_SIZE_14,
       color: AppColors.primaryText,
       fontStyle: FontStyle.normal,
-      fontWeight: _medium,
+      fontWeight: _regular,
     ),
     caption: TextStyle(
       fontFamily: StringConst.FONT_FAMILY,
       fontSize: Sizes.TEXT_SIZE_12,
-      color: AppColors.white,
+      color: AppColors.primaryText,
       fontWeight: _regular,
       fontStyle: FontStyle.normal,
     ),
