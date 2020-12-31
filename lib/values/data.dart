@@ -71,4 +71,91 @@ class Data {
       backgroundColor: AppColors.accentYellowColor,
     ),
   ];
+
+  static List<CategoryItem> categoryItems = [
+    CategoryItem(
+      title: StringConst.SNEAKERS,
+      imagePath: ImagePath.AIR_JORDAN_1_MID_SE,
+      subtitle: "233",
+      subtitleColor: AppColors.accentPurpleColor,
+    ),
+    CategoryItem(
+      title: StringConst.JEWELRY,
+      imagePath: ImagePath.AIR_JORDAN_1_MID_SE,
+      subtitle: "26",
+      subtitleColor: AppColors.accentYellowColor,
+    ),
+    CategoryItem(
+      title: StringConst.SNEAKERS,
+      imagePath: ImagePath.AIR_JORDAN_1_MID_SE,
+      subtitle: "17",
+      subtitleColor: AppColors.accentDarkGreenColor,
+    ),
+    CategoryItem(
+      title: StringConst.SNEAKERS,
+      imagePath: ImagePath.AIR_JORDAN_1_MID_SE,
+      subtitle: "78",
+      subtitleColor: AppColors.accentOrangeColor,
+    ),
+    CategoryItem(
+      title: StringConst.SNEAKERS,
+      imagePath: ImagePath.AIR_JORDAN_1_MID_SE,
+      subtitle: "126",
+      subtitleColor: AppColors.accentPinkColor,
+    ),
+  ];
+
+  static List<ProductDealItem> productDealItems = [
+    ProductDealItem(
+      title: StringConst.SNEAKERS,
+      subtitle: StringConst.OFF_WHITE,
+      imagePath: ImagePath.AIR_JORDAN_1_MID_SE,
+      price: "580",
+    ),
+    ProductDealItem(
+      title: StringConst.SNEAKERS,
+      subtitle: StringConst.OFF_WHITE,
+      imagePath: ImagePath.AIR_JORDAN_1_MID_SE,
+      price: "230",
+    ),
+    ProductDealItem(
+      title: StringConst.SNEAKERS,
+      subtitle: StringConst.OFF_WHITE,
+      imagePath: ImagePath.AIR_JORDAN_1_MID_SE,
+      price: "80",
+    ),
+    ProductDealItem(
+        title: StringConst.SNEAKERS,
+        subtitle: StringConst.OFF_WHITE,
+        imagePath: ImagePath.AIR_JORDAN_1_MID_SE,
+        price: "159"),
+    ProductDealItem(
+        title: StringConst.SNEAKERS,
+        subtitle: StringConst.OFF_WHITE,
+        imagePath: ImagePath.AIR_JORDAN_1_MID_SE,
+        price: "99"),
+  ];
+
+  static List<ProductItem> productItems = [
+    ProductItem(
+      title: StringConst.SNEAKERS,
+      imagePath: ImagePath.AIR_JORDAN_1_MID_SE,
+      price: "180",
+    ),
+    ProductItem(
+      title: StringConst.SNEAKERS,
+      imagePath: ImagePath.AIR_JORDAN_1_MID_SE,
+      price: "380",
+    ),
+    ProductItem(
+      title: StringConst.SNEAKERS,
+      imagePath: ImagePath.AIR_JORDAN_1_MID_SE,
+      price: "75",
+    ),
+    ProductItem(
+      title: StringConst.SNEAKERS,
+      imagePath: ImagePath.AIR_JORDAN_1_MID_SE,
+      price: "99",
+    ),
+  ];
 }

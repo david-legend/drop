@@ -1,8 +1,11 @@
 library values;
 
 import 'package:drop/presentation/routes/router.gr.dart';
+import 'package:drop/presentation/widgets/category_card.dart';
 import 'package:drop/presentation/widgets/drop_appbar.dart';
 import 'package:drop/presentation/widgets/pill.dart';
+import 'package:drop/presentation/widgets/product_card.dart';
+import 'package:drop/presentation/widgets/product_deal_card.dart';
 import 'package:drop/presentation/widgets/social_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';

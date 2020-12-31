@@ -19,7 +19,7 @@ class StringConst {
   static const String DONE = "Done";
   static const String SKIP = "Skip";
   static const String FOOTWEAR = "Footwear";
-  static const String HOT_DROP = "Footwear";
+  static const String HOT_DROP = "Hot-drop";
   static const String ART = "Art";
   static const String TOYS = "Toys";
   static const String OFF_WHITE = "Off-White";
@@ -35,6 +35,7 @@ class StringConst {
   static const String YEEZY = "Yeezy";
   static const String ADIDAS = "Adidas";
   static const String VANS = "Vans";
+  static const String SNEAKERS = "Sneakers";
 
   //Home Screen
   static const String HOME = "Home";
@@ -42,6 +43,8 @@ class StringConst {
   static const String NEW_IN = "New in";
   static const String SALE = "Sale";
   static const String PROFILE = "Profile";
+  static const String SEE_ALL = "See all";
+  static const String SORT_BY = "Sort by";
 
   //Profile Screen
   static const String USERNAME_2 = "David Legend";
@@ -52,6 +55,10 @@ class StringConst {
   static const String PERSONAL_DATA_PASSWORD = "Personal data and password";
   static const String FAQ = "FAQ";
   static const String CONTACT_US = "Contact us";
+
+  //Categories Screen
+  static const String TOP_DEALS = "Top Deals";
+  static const String NEWEST = "Newest";
 
   //Registration / Login
   static const String LOG_IN = "Log in";
