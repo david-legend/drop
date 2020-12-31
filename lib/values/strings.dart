@@ -33,8 +33,25 @@ class StringConst {
   static const String SUPREME = "Supreme";
   static const String GUCCI = "Gucci";
   static const String YEEZY = "Yeezy";
-  static const String ADIDAS = "Adida";
+  static const String ADIDAS = "Adidas";
   static const String VANS = "Vans";
+
+  //Home Screen
+  static const String HOME = "Home";
+  static const String CATEGORIES = "Categories";
+  static const String NEW_IN = "New in";
+  static const String SALE = "Sale";
+  static const String PROFILE = "Profile";
+
+  //Profile Screen
+  static const String USERNAME_2 = "David Legend";
+  static const String USERNAME_EMAIL = "davidcobbina47@gmail.com";
+  static const String USER_LOCATION = "Ghana, Accra";
+  static const String EXIT = "Exit";
+  static const String ORDERS_AND_RETURNS = "Orders and returns";
+  static const String PERSONAL_DATA_PASSWORD = "Personal data and password";
+  static const String FAQ = "FAQ";
+  static const String CONTACT_US = "Contact us";
 
   //Registration / Login
   static const String LOG_IN = "Log in";

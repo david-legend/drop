@@ -1,8 +1,12 @@
 library values;
 
+import 'package:drop/presentation/routes/router.gr.dart';
+import 'package:drop/presentation/widgets/drop_appbar.dart';
 import 'package:drop/presentation/widgets/pill.dart';
+import 'package:drop/presentation/widgets/social_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 part 'colors.dart';

@@ -9,13 +9,13 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
-import '../screens/about_screen.dart';
 import '../screens/auth_screen.dart';
 import '../screens/categories_screen.dart';
 import '../screens/category_item_screen.dart';
 import '../screens/home_screen.dart';
 import '../screens/interest_screen.dart';
 import '../screens/product_screen.dart';
+import '../screens/profile_screen.dart';
 import '../screens/sign_up_screen.dart';
 import '../screens/splash_screen.dart';
 import '../screens/verification_screen.dart';
@@ -30,7 +30,7 @@ class Routes {
   static const String categoriesScreen = '/categories-screen';
   static const String categoryItemScreen = '/category-item-screen';
   static const String productScreen = '/product-screen';
-  static const String aboutScreen = '/about-screen';
+  static const String profileScreen = '/profile-screen';
   static const all = <String>{
     splashScreen,
     authScreen,
@@ -41,7 +41,7 @@ class Routes {
     categoriesScreen,
     categoryItemScreen,
     productScreen,
-    aboutScreen,
+    profileScreen,
   };
 }
 
@@ -58,7 +58,7 @@ class AppRouter extends RouterBase {
     RouteDef(Routes.categoriesScreen, page: CategoriesScreen),
     RouteDef(Routes.categoryItemScreen, page: CategoryItemScreen),
     RouteDef(Routes.productScreen, page: ProductScreen),
-    RouteDef(Routes.aboutScreen, page: AboutScreen),
+    RouteDef(Routes.profileScreen, page: ProfileScreen),
   ];
   @override
   Map<Type, AutoRouteFactory> get pagesMap => _pagesMap;
@@ -117,9 +117,9 @@ class AppRouter extends RouterBase {
         settings: data,
       );
     },
-    AboutScreen: (data) {
+    ProfileScreen: (data) {
       return MaterialPageRoute<dynamic>(
-        builder: (context) => AboutScreen(),
+        builder: (context) => ProfileScreen(),
         settings: data,
       );
     },

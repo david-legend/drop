@@ -1,5 +1,5 @@
 import 'package:auto_route/auto_route_annotations.dart';
-import 'package:drop/presentation/screens/about_screen.dart';
+import 'package:drop/presentation/screens/profile_screen.dart';
 import 'package:drop/presentation/screens/auth_screen.dart';
 import 'package:drop/presentation/screens/categories_screen.dart';
 import 'package:drop/presentation/screens/category_item_screen.dart';
@@ -26,7 +26,7 @@ import 'package:drop/presentation/screens/verification_screen.dart';
     MaterialRoute(page: CategoriesScreen),
     MaterialRoute(page: CategoryItemScreen),
     MaterialRoute(page: ProductScreen),
-    MaterialRoute(page: AboutScreen),
+    MaterialRoute(page: ProfileScreen),
   ],
 )
 class $AppRouter {}
