@@ -15,11 +15,14 @@ class StringConst {
 
   //Interests Screen
   static const String LOOKING_FOR = "What are you looking for ?";
-  static const String CHOOSE_INTEREST = "Choose Your Interest";
+  static const String CHOOSE_INTEREST = "Choose Your Interests";
   static const String DONE = "Done";
   static const String SKIP = "Skip";
   static const String FOOTWEAR = "Footwear";
+  static const String HOT_DROP = "Footwear";
   static const String ART = "Art";
+  static const String TOYS = "Toys";
+  static const String OFF_WHITE = "Off-White";
   static const String BALENCIAGA = "Balenciaga";
   static const String SPORTS = "Sports";
   static const String BEAUTY = "Beauty";

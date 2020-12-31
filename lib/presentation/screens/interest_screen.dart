@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:drop/presentation/routes/router.gr.dart';
 import 'package:drop/presentation/widgets/custom_appbar.dart';
 import 'package:drop/presentation/widgets/custom_button.dart';
+import 'package:drop/presentation/widgets/pill.dart';
 import 'package:drop/presentation/widgets/spaces.dart';
 import 'package:drop/values/values.dart';
 import 'package:flutter/material.dart';
@@ -20,6 +21,7 @@ class InterestScreen extends StatelessWidget {
       body: Container(
         padding: const EdgeInsets.only(left: Sizes.PADDING_24),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               StringConst.LOOKING_FOR,
@@ -30,9 +32,17 @@ class InterestScreen extends StatelessWidget {
               StringConst.CHOOSE_INTEREST,
               style: theme.textTheme.headline6,
             ),
+            SpaceH16(),
+            Wrap(
+              spacing: Sizes.SIZE_16,
+              runSpacing: Sizes.SIZE_16,
+              children: _buildInterestPills(Data.pillItems),
+            ),
             Spacer(flex: 2),
             CustomButton(
-              onPressed: () {},
+              onPressed: () {
+                ExtendedNavigator.root.push(Routes.homeScreen);
+              },
               height: Sizes.HEIGHT_60,
               borderRadiusGeometry: AppRadius.defaultButtonRadius,
               title: StringConst.DONE,
@@ -44,7 +54,7 @@ class InterestScreen extends StatelessWidget {
             SpaceH16(),
             CustomButton(
               onPressed: () {
-//                ExtendedNavigator.root.push(Routes.interestScreen);
+                ExtendedNavigator.root.push(Routes.homeScreen);
               },
               height: Sizes.HEIGHT_60,
               borderSide: Borders.defaultButtonBorder,
@@ -52,7 +62,7 @@ class InterestScreen extends StatelessWidget {
               title: StringConst.SKIP,
               color: AppColors.white,
               textStyle: theme.textTheme.subtitle1.copyWith(
-                color: AppColors.white,
+                color: AppColors.secondaryColor2,
               ),
             ),
             Spacer(),
@@ -60,5 +70,20 @@ class InterestScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  List<Widget> _buildInterestPills(List<PillItem> pillItems) {
+    List<Widget> items = [];
+
+    for (int index = 0; index < pillItems.length; index++) {
+      items.add(
+        Pill(
+          title: pillItems[index].title,
+          selectedBackgroundColor: pillItems[index].color,
+        ),
+      );
+    }
+
+    return items;
   }
 }
