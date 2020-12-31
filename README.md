@@ -1,16 +1,26 @@
-# drop
+<h1 align="center">
+  <a href="http://davidcobbina.com" target="_blank">davidcobbina.com</a>
+</h1>
 
-A new Flutter application.
+<p align="center">
+    Drop is an online store which provides users with a simple, smooth experience and enabling users to 
+     get their hands on the latest and newest drops. It was built using <strong>flutter</strong>.
+</p>
+<p align="center">
+     <a href="https://www.behance.net/gallery/102261423/DROP-Online-Store-E-commerce?tracking_source=curated_galleries_ui-ux" target="_blank">Click here to go to the Actual Designs used</a>
+</p>
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+![Screenshot](assets/screenshots/drop_cover.png)
 
-A few resources to get you started if this is your first Flutter project:
+![Screenshot](assets/screenshots/drop_description.gif)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+![Screenshot](assets/screenshots/drop_flowchart.png)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Screenshot](assets/screenshots/drop_wireframes.gif)
+
+![Screenshot](assets/screenshots/drop_minimal_design.png)
+
+![Screenshot](assets/screenshots/drop_easy_access.gif)
+
+![Screenshot](assets/screenshots/drop_simple.png)
