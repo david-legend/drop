@@ -48,37 +48,43 @@ class AppTheme {
   static const _light = FontWeight.w300;
 
   static final TextTheme _textTheme = TextTheme(
-    headline1: GoogleFonts.roboto(
+    headline1: TextStyle(
+      fontFamily: StringConst.FONT_FAMILY,
       fontSize: Sizes.TEXT_SIZE_96,
       color: AppColors.primaryText,
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
-    headline2: GoogleFonts.poppins(
+    headline2: TextStyle(
+      fontFamily: StringConst.FONT_FAMILY,
       fontSize: Sizes.TEXT_SIZE_60,
       color: AppColors.primaryText,
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
-    headline3: GoogleFonts.poppins(
+    headline3: TextStyle(
+      fontFamily: StringConst.FONT_FAMILY,
       fontSize: Sizes.TEXT_SIZE_48,
       color: AppColors.primaryText,
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
-    headline4: GoogleFonts.poppins(
+    headline4: TextStyle(
+      fontFamily: StringConst.FONT_FAMILY,
       fontSize: Sizes.TEXT_SIZE_34,
       color: AppColors.primaryText,
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
-    headline5: GoogleFonts.poppins(
+    headline5: TextStyle(
+      fontFamily: StringConst.FONT_FAMILY,
       fontSize: Sizes.TEXT_SIZE_24,
       color: AppColors.primaryText,
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
-    headline6: GoogleFonts.poppins(
+    headline6: TextStyle(
+      fontFamily: StringConst.FONT_FAMILY,
       fontSize: Sizes.TEXT_SIZE_20,
       color: AppColors.black50,
       fontWeight: _bold,
@@ -96,13 +102,15 @@ class AppTheme {
       fontWeight: _semiBold,
       fontStyle: FontStyle.normal,
     ),
-    bodyText1: GoogleFonts.poppins(
+    bodyText1: TextStyle(
+      fontFamily: StringConst.FONT_FAMILY,
       fontSize: Sizes.TEXT_SIZE_16,
       color: AppColors.primaryText,
       fontWeight: _light,
       fontStyle: FontStyle.normal,
     ),
-    bodyText2: GoogleFonts.poppins(
+    bodyText2: TextStyle(
+      fontFamily: StringConst.FONT_FAMILY,
       fontSize: Sizes.TEXT_SIZE_14,
       color: AppColors.primaryText,
       fontWeight: _light,
@@ -114,7 +122,8 @@ class AppTheme {
       fontStyle: FontStyle.normal,
       fontWeight: _medium,
     ),
-    caption: GoogleFonts.poppins(
+    caption: TextStyle(
+      fontFamily: StringConst.FONT_FAMILY,
       fontSize: Sizes.TEXT_SIZE_12,
       color: AppColors.white,
       fontWeight: _regular,
