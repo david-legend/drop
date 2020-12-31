@@ -4,7 +4,15 @@ class StringConst {
   //strings
   static const String APP_NAME = "Drop";
 
-  //OnBoarding
+  //Verification Screen
+  static const String VERIFICATION_CODE = "Verification Code";
+  static const String VERIFICATION_TEXT = "We texted you a code.";
+  static const String ENTER_CODE = "Please enter it below.";
+  static const String VERIFICATION_DESCRIPTION =
+      "This helps us verify every user in our market place.";
+  static const String NO_CODE = "Didn't get code?";
+  static const String CONFIRM = "Confirm";
+
   static const String ONBOARDING_TITLE_1 =
       "Find new  places and explore  adventures";
   static const String ONBOARDING_TITLE_2 =

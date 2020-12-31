@@ -1,5 +1,7 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:bubble_tab_indicator/bubble_tab_indicator.dart';
 import 'package:drop/presentation/layout/adaptive.dart';
+import 'package:drop/presentation/routes/router.gr.dart';
 import 'package:drop/presentation/widgets/custom_button.dart';
 import 'package:drop/presentation/widgets/custom_text_form_field.dart';
 import 'package:drop/presentation/widgets/spaces.dart';
@@ -50,7 +52,7 @@ class AuthScreen extends StatelessWidget {
                         ),
                         indicator: BubbleTabIndicator(
                           indicatorHeight: Sizes.HEIGHT_40,
-                          indicatorColor: AppColors.primaryColor,
+                          indicatorColor: AppColors.white,
                           tabBarIndicatorSize: TabBarIndicatorSize.tab,
                         ),
                         tabs: [
@@ -137,12 +139,14 @@ class AuthScreen extends StatelessWidget {
           ),
           Spacer(),
           CustomButton(
-            onPressed: () {},
+            onPressed: () {
+              ExtendedNavigator.root.push(Routes.verificationScreen);
+            },
             height: Sizes.HEIGHT_60,
             borderRadiusGeometry: AppRadius.defaultButtonRadius,
             title: StringConst.LOG_IN,
             textStyle: theme.textTheme.subtitle1.copyWith(
-              color: AppColors.primaryColor,
+              color: AppColors.white,
             ),
           ),
           SpaceH16(),
@@ -151,7 +155,7 @@ class AuthScreen extends StatelessWidget {
             height: Sizes.HEIGHT_60,
             borderRadiusGeometry: AppRadius.defaultButtonRadius,
             title: StringConst.LOG_IN_WITH_GOOGLE,
-            color: AppColors.primaryColor,
+            color: AppColors.white,
             borderSide: Borders.defaultButtonBorder,
             textStyle: theme.textTheme.subtitle1,
           ),
@@ -161,7 +165,7 @@ class AuthScreen extends StatelessWidget {
             height: Sizes.HEIGHT_60,
             borderRadiusGeometry: AppRadius.defaultButtonRadius,
             title: StringConst.LOG_IN_WITH_FACEBOOK,
-            color: AppColors.primaryColor,
+            color: AppColors.white,
             borderSide: Borders.defaultButtonBorder,
             textStyle: theme.textTheme.subtitle1,
           ),

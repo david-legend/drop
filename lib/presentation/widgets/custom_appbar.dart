@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:drop/values/values.dart';
 
@@ -63,12 +64,15 @@ class CustomAppBar extends StatelessWidget {
 
   Widget defaultLeading() {
     return InkWell(
-      onTap: () {},
+      onTap: onLeadingTap ??
+          () {
+            ExtendedNavigator.root.pop();
+          },
       child: Padding(
         padding: const EdgeInsets.only(left: Sizes.PADDING_16),
         child: Icon(
           Icons.arrow_back_ios,
-          color: leadingColor,
+          color: leadingColor ?? AppColors.primaryText,
         ),
       ),
     );
