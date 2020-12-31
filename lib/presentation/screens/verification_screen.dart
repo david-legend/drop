@@ -1,3 +1,5 @@
+import 'package:auto_route/auto_route.dart';
+import 'package:drop/presentation/routes/router.gr.dart';
 import 'package:drop/presentation/widgets/custom_appbar.dart';
 import 'package:drop/presentation/widgets/custom_button.dart';
 import 'package:drop/presentation/widgets/otp_text_field.dart';
@@ -47,13 +49,12 @@ class _VerificationScreenState extends State<VerificationScreen> {
             Spacer(flex: 2),
             OtpTextField(
               numberOfFields: 6,
-              borderColor: Color(0xFF512DA8),
+              borderColor: AppColors.accentPurpleColor,
+              focusedBorderColor: AppColors.accentPurpleColor,
               styles: otpTextStyles,
               showFieldAsBox: false,
-              //set to true to show as box or false to show as dash
-              onCodeChanged: (String code) {
-                //handle validation or checks here
-              },
+              borderWidth: Sizes.WIDTH_8,
+              onCodeChanged: (String code) {},
               onSubmit: (String verificationCode) {}, // end onSubmit
             ),
             Spacer(),
@@ -75,7 +76,9 @@ class _VerificationScreenState extends State<VerificationScreen> {
             ),
             Spacer(flex: 3),
             CustomButton(
-              onPressed: () {},
+              onPressed: () {
+                ExtendedNavigator.root.push(Routes.interestScreen);
+              },
               height: Sizes.HEIGHT_60,
               borderRadiusGeometry: AppRadius.defaultButtonRadius,
               title: StringConst.CONFIRM,

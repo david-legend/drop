@@ -13,16 +13,25 @@ class StringConst {
   static const String NO_CODE = "Didn't get code?";
   static const String CONFIRM = "Confirm";
 
-  static const String ONBOARDING_TITLE_1 =
-      "Find new  places and explore  adventures";
-  static const String ONBOARDING_TITLE_2 =
-      "Meet new people with similar interest ";
-  static const String ONBOARDING_TITLE_3 = "Share trip ideas with friends";
-  static const String LOREM_IPSUM_1 =
-      "Integer arcu, egestas at nunc. Pellentesque amet scelerisque in dui ut. Fringilla nulla proin nibh amet. Curabitur.";
-  static const String LOREM_IPSUM_2 =
-      "Ornare non in in varius velit laoreet. Aenean at ut non, duis ut ut condimentum urna. At integer pellentesque dapibus a. Ornare.";
-  static const String GET_STARTED = "Get Started";
+  //Interests Screen
+  static const String LOOKING_FOR = "What are you looking for ?";
+  static const String CHOOSE_INTEREST = "Choose Your Interest";
+  static const String DONE = "Done";
+  static const String SKIP = "Skip";
+  static const String FOOTWEAR = "Footwear";
+  static const String ART = "Art";
+  static const String BALENCIAGA = "Balenciaga";
+  static const String SPORTS = "Sports";
+  static const String BEAUTY = "Beauty";
+  static const String FASHION = "Fashion";
+  static const String JEWELRY = "Jewelry";
+  static const String PRADA = "Prada";
+  static const String NIKE = "Nike";
+  static const String SUPREME = "Supreme";
+  static const String GUCCI = "Gucci";
+  static const String YEEZY = "Yeezy";
+  static const String ADIDAS = "Adida";
+  static const String VANS = "Vans";
 
   //Registration / Login
   static const String LOG_IN = "Log in";

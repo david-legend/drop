@@ -155,6 +155,7 @@ class _OtpTextFieldState extends State<OtpTextField> {
 
   UnderlineInputBorder underlineInputBorder(Color color) {
     return UnderlineInputBorder(
+      borderRadius: widget.borderRadius,
       borderSide: BorderSide(
         color: color,
         width: widget.borderWidth,
