@@ -1,4 +1,6 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:drop/presentation/layout/adaptive.dart';
+import 'package:drop/presentation/routes/router.gr.dart';
 import 'package:drop/presentation/widgets/category_card.dart';
 import 'package:drop/presentation/widgets/drop_appbar.dart';
 import 'package:drop/presentation/widgets/product_card.dart';
@@ -46,6 +48,14 @@ class CategoriesScreen extends StatelessWidget {
                     subtitle: Data.categoryItems[index].subtitle,
                     subtitleColor: Data.categoryItems[index].subtitleColor,
                     imagePath: Data.categoryItems[index].imagePath,
+                    onTap: () {
+                      ExtendedNavigator.root.push(
+                        Routes.categoryItemScreen,
+                        arguments: CategoryItemScreenArguments(
+                          category: Data.categoryItems[index].title,
+                        ),
+                      );
+                    },
                   );
                 },
               ),

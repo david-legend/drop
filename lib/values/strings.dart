@@ -36,6 +36,9 @@ class StringConst {
   static const String ADIDAS = "Adidas";
   static const String VANS = "Vans";
   static const String SNEAKERS = "Sneakers";
+  static const String SHIRTS = "Shirts";
+
+  static const String TAG = "Speed Yellow";
 
   //Home Screen
   static const String HOME = "Home";
@@ -59,6 +62,14 @@ class StringConst {
   //Categories Screen
   static const String TOP_DEALS = "Top Deals";
   static const String NEWEST = "Newest";
+
+  //Category Item Screen
+  static const String CURRENCY = "USD";
+
+  //Products Screen
+  static const String SIZES = "Sizes";
+  static const String SIZE_GUIDE = "Size guide";
+  static const String ADD_TO_CART = "Add to Cart";
 
   //Registration / Login
   static const String LOG_IN = "Log in";

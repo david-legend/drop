@@ -19,6 +19,7 @@ import '../screens/profile_screen.dart';
 import '../screens/sign_up_screen.dart';
 import '../screens/splash_screen.dart';
 import '../screens/verification_screen.dart';
+import '../widgets/product_card.dart';
 
 class Routes {
   static const String splashScreen = '/';
@@ -106,14 +107,16 @@ class AppRouter extends RouterBase {
       );
     },
     CategoryItemScreen: (data) {
+      final args = data.getArgs<CategoryItemScreenArguments>(nullOk: false);
       return MaterialPageRoute<dynamic>(
-        builder: (context) => CategoryItemScreen(),
+        builder: (context) => CategoryItemScreen(args.category),
         settings: data,
       );
     },
     ProductScreen: (data) {
+      final args = data.getArgs<ProductScreenArguments>(nullOk: false);
       return MaterialPageRoute<dynamic>(
-        builder: (context) => ProductScreen(),
+        builder: (context) => ProductScreen(args.product),
         settings: data,
       );
     },
@@ -124,4 +127,20 @@ class AppRouter extends RouterBase {
       );
     },
   };
+}
+
+/// ************************************************************************
+/// Arguments holder classes
+/// *************************************************************************
+
+/// CategoryItemScreen arguments holder class
+class CategoryItemScreenArguments {
+  final String category;
+  CategoryItemScreenArguments({@required this.category});
+}
+
+/// ProductScreen arguments holder class
+class ProductScreenArguments {
+  final ProductItem product;
+  ProductScreenArguments({@required this.product});
 }

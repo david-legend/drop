@@ -31,6 +31,7 @@ class CategoryCard extends StatelessWidget {
     this.borderRadius = const BorderRadius.all(
       const Radius.circular(Sizes.RADIUS_30),
     ),
+    this.onTap,
   });
 
   final String title;
@@ -41,46 +42,51 @@ class CategoryCard extends StatelessWidget {
   final String imagePath;
   final BorderRadiusGeometry borderRadius;
   final Color backgroundColor;
+  final GestureTapCallback onTap;
 
   @override
   Widget build(BuildContext context) {
     ThemeData theme = Theme.of(context);
 
-    return Container(
-      width: width,
-      child: Column(
-        children: [
-          Container(
-            padding: EdgeInsets.symmetric(horizontal: kPaddingHorizontal),
-            decoration: BoxDecoration(
-              color: backgroundColor,
-              borderRadius: borderRadius,
-            ),
-            width: width,
-            height: height,
-            child: ClipRRect(
-              borderRadius: borderRadius,
-              child: Image.asset(
-                imagePath,
-                fit: BoxFit.cover,
+    return InkWell(
+      onTap: onTap,
+      child: Container(
+        width: width,
+        child: Column(
+          children: [
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: kPaddingHorizontal),
+              decoration: BoxDecoration(
+                color: backgroundColor,
+                borderRadius: borderRadius,
+              ),
+              width: width,
+              height: height,
+              child: ClipRRect(
+                borderRadius: borderRadius,
+                child: Image.asset(
+                  imagePath,
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
-          ),
-          SpaceH8(),
-          Row(
-            children: [
-              Text(
-                title,
-                style: theme.textTheme.subtitle1,
-              ),
-              SpaceW4(),
-              Text(
-                "($subtitle)",
-                style: theme.textTheme.subtitle2.copyWith(color: subtitleColor),
-              ),
-            ],
-          )
-        ],
+            SpaceH8(),
+            Row(
+              children: [
+                Text(
+                  title,
+                  style: theme.textTheme.subtitle1,
+                ),
+                SpaceW4(),
+                Text(
+                  "($subtitle)",
+                  style:
+                      theme.textTheme.subtitle2.copyWith(color: subtitleColor),
+                ),
+              ],
+            )
+          ],
+        ),
       ),
     );
   }

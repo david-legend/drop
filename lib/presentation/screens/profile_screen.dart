@@ -1,7 +1,7 @@
 import 'package:drop/presentation/layout/adaptive.dart';
 import 'package:drop/presentation/widgets/custom_appbar.dart';
 import 'package:drop/presentation/widgets/custom_button.dart';
-import 'package:drop/presentation/widgets/social_icon.dart';
+import 'package:drop/presentation/widgets/rounded_container.dart';
 import 'package:drop/presentation/widgets/spaces.dart';
 import 'package:drop/values/values.dart';
 import 'package:flutter/material.dart';
@@ -107,7 +107,7 @@ class ProfileScreen extends StatelessWidget {
         (socialItems.length * 2);
     for (int index = 0; index < socialItems.length; index++) {
       items.add(
-        SocialIcon(
+        RoundedContainer(
           iconData: socialItems[index].iconData,
           backgroundColor: socialItems[index].backgroundColor,
           width: 60,

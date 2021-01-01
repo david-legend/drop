@@ -9,8 +9,8 @@ class SocialItem {
   final Color backgroundColor;
 }
 
-class SocialIcon extends StatelessWidget {
-  SocialIcon({
+class RoundedContainer extends StatelessWidget {
+  RoundedContainer({
     this.width,
     this.height,
     this.backgroundColor = AppColors.accentOrangeColor,
@@ -22,6 +22,7 @@ class SocialIcon extends StatelessWidget {
     this.iconColor = AppColors.white,
     this.iconSize = Sizes.ICON_SIZE_40,
     this.iconData,
+    this.border,
     this.icon,
   });
 
@@ -32,6 +33,7 @@ class SocialIcon extends StatelessWidget {
   final BorderRadiusGeometry borderRadius;
   final double iconSize;
   final IconData iconData;
+  final Border border;
   final Widget icon;
 
   @override
@@ -46,6 +48,7 @@ class SocialIcon extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: borderRadius,
         color: backgroundColor,
+        border: border,
       ),
       child: icon ??
           Icon(

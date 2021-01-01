@@ -80,13 +80,13 @@ class Data {
       subtitleColor: AppColors.accentPurpleColor,
     ),
     CategoryItem(
-      title: StringConst.JEWELRY,
+      title: StringConst.SHIRTS,
       imagePath: ImagePath.NIKE_SHOE_2,
       subtitle: "26",
       subtitleColor: AppColors.accentYellowColor,
     ),
     CategoryItem(
-      title: StringConst.SNEAKERS,
+      title: StringConst.JEWELRY,
       imagePath: ImagePath.NIKE_SHOE_3,
       subtitle: "17",
       subtitleColor: AppColors.accentDarkGreenColor,
@@ -96,12 +96,6 @@ class Data {
       imagePath: ImagePath.NIKE_SHOE_4,
       subtitle: "78",
       subtitleColor: AppColors.accentOrangeColor,
-    ),
-    CategoryItem(
-      title: StringConst.SNEAKERS,
-      imagePath: ImagePath.SHOE_5,
-      subtitle: "126",
-      subtitleColor: AppColors.accentPinkColor,
     ),
   ];
 
@@ -138,26 +132,97 @@ class Data {
     ),
   ];
 
-  static List<ProductItem> productItems = [
+  static List<ProductItem> sneakers = [
     ProductItem(
       title: StringConst.SNEAKERS,
-      imagePath: ImagePath.AIR_JORDAN_1_MID_SE,
-      price: "\$180",
+      imagePath: ImagePath.NIKE_SHOE_4,
+      price: "\$125",
+      tag: StringConst.TAG,
+      images: nikeImages,
+      sizes: shoeSizes,
     ),
     ProductItem(
       title: StringConst.SNEAKERS,
-      imagePath: ImagePath.AIR_JORDAN_1_MID_SE,
-      price: "\$380",
+      imagePath: ImagePath.NIKE_SHOE_4,
+      price: "\$200",
+      tag: StringConst.TAG,
+      images: nikeImages,
+      sizes: shoeSizes,
     ),
     ProductItem(
       title: StringConst.SNEAKERS,
-      imagePath: ImagePath.AIR_JORDAN_1_MID_SE,
-      price: "\$75",
+      imagePath: ImagePath.NIKE_SHOE_4,
+      price: "\$399",
+      tag: StringConst.TAG,
+      images: nikeImages,
+      sizes: shoeSizes,
     ),
-    ProductItem(
-      title: StringConst.SNEAKERS,
-      imagePath: ImagePath.AIR_JORDAN_1_MID_SE,
-      price: "\$99",
+  ];
+
+  static Map<String, List<ProductItem>> productCategories = {
+    StringConst.SNEAKERS: sneakers,
+    StringConst.SHIRTS: sneakers,
+    StringConst.JEWELRY: sneakers,
+  };
+
+  static List<String> shirtSizes = [
+    "38",
+    "39",
+    "40",
+    "41",
+    "42",
+    "43",
+    "44",
+    "45"
+  ];
+
+  static List<SelectorModel> shoeSizes = [
+    SelectorModel(
+      title: "38",
+      isSelected: false,
+      backgroundColor: AppColors.accentPurpleColor,
     ),
+    SelectorModel(
+      title: "39",
+      isSelected: false,
+      backgroundColor: AppColors.accentYellowColor,
+    ),
+    SelectorModel(
+      title: "40",
+      isSelected: false,
+      backgroundColor: AppColors.accentDarkGreenColor,
+    ),
+    SelectorModel(
+      title: "41",
+      isSelected: false,
+      backgroundColor: AppColors.accentOrangeColor,
+    ),
+    SelectorModel(
+      title: "42",
+      isSelected: false,
+      backgroundColor: AppColors.accentPinkColor,
+    ),
+    SelectorModel(
+      title: "43",
+      isSelected: false,
+      backgroundColor: AppColors.accentPurpleColor,
+    ),
+    SelectorModel(
+      title: "44",
+      isSelected: false,
+      backgroundColor: AppColors.accentYellowColor,
+    ),
+    SelectorModel(
+      title: "45",
+      isSelected: false,
+      backgroundColor: AppColors.accentOrangeColor,
+    ),
+  ];
+
+  static List<String> nikeImages = [
+    ImagePath.NIKE_SHOE_4,
+    ImagePath.NIKE_SHOE_4,
+    ImagePath.NIKE_SHOE_4,
+    ImagePath.NIKE_SHOE_4,
   ];
 }
