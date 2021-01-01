@@ -14,8 +14,11 @@ class CategoriesScreen extends StatelessWidget {
     return Scaffold(
       body: Container(
         child: ListView(
-          padding:
-              EdgeInsets.only(left: Sizes.PADDING_24, top: Sizes.PADDING_32),
+          padding: EdgeInsets.only(
+            left: Sizes.PADDING_24,
+            top: Sizes.PADDING_32,
+            bottom: Sizes.PADDING_24,
+          ),
           children: [
             PreferredSize(
               preferredSize: Size.fromHeight(Sizes.HEIGHT_56),
@@ -30,7 +33,7 @@ class CategoriesScreen extends StatelessWidget {
             ),
             SpaceH8(),
             Container(
-              height: assignHeight(context: context, fraction: 0.3),
+              height: 250,
               child: ListView.separated(
                 scrollDirection: Axis.horizontal,
                 itemCount: Data.categoryItems.length,
@@ -54,7 +57,7 @@ class CategoriesScreen extends StatelessWidget {
             ),
             SpaceH8(),
             Container(
-              height: assignHeight(context: context, fraction: 0.3),
+              height: 250,
               child: ListView.separated(
                 scrollDirection: Axis.horizontal,
                 itemCount: Data.productDealItems.length,
@@ -77,18 +80,19 @@ class CategoriesScreen extends StatelessWidget {
               title2: StringConst.SEE_ALL,
             ),
             Container(
-              height: assignHeight(context: context, fraction: 0.3),
+              height: 250,
               child: ListView.separated(
                 scrollDirection: Axis.horizontal,
-                itemCount: Data.productItems.length,
+                itemCount: Data.productDealItems.length,
                 separatorBuilder: (BuildContext context, int index) {
                   return SpaceW8();
                 },
                 itemBuilder: (BuildContext context, int index) {
-                  return ProductCard(
-                    title: Data.productItems[index].title,
-                    price: Data.productItems[index].price,
-                    imagePath: Data.productItems[index].imagePath,
+                  return ProductDealCard(
+                    title: Data.productDealItems[index].title,
+                    subtitle: Data.productDealItems[index].subtitle,
+                    price: Data.productDealItems[index].price,
+                    imagePath: Data.productDealItems[index].imagePath,
                   );
                 },
               ),

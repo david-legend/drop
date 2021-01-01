@@ -13,5 +13,11 @@ class ImagePath {
   static const String AIR_ZOOM_TEMPO = "$imageDir/air-zoom-tempo.jpg";
   static const String KYRIE_7 = "$imageDir/kyrie-7-basketball.jpg";
 
+  static const String NIKE_SHOE_1 = "$imageDir/nike_shoe_1.png";
+  static const String NIKE_SHOE_2 = "$imageDir/nike_shoe_2.png";
+  static const String NIKE_SHOE_3 = "$imageDir/nike_shoe_3.png";
+  static const String NIKE_SHOE_4 = "$imageDir/nike_shoe_4.png";
+  static const String SHOE_5 = "$imageDir/shoe_5.png";
+
   //screenshots for ReadMe
 }

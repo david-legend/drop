@@ -3,6 +3,8 @@ import 'package:drop/presentation/widgets/spaces.dart';
 import 'package:drop/values/values.dart';
 import 'package:flutter/material.dart';
 
+const double kPaddingHorizontal = Sizes.PADDING_16;
+
 class CategoryItem {
   CategoryItem({
     @required this.title,
@@ -21,9 +23,11 @@ class CategoryCard extends StatelessWidget {
   CategoryCard({
     this.title,
     this.subtitle = "0",
+    this.width = Sizes.WIDTH_200,
+    this.height = Sizes.HEIGHT_200,
     this.subtitleColor = AppColors.accentOrangeColor,
     this.imagePath,
-    this.backgroundColor = AppColors.secondaryColor2,
+    this.backgroundColor = AppColors.secondaryColor,
     this.borderRadius = const BorderRadius.all(
       const Radius.circular(Sizes.RADIUS_30),
     ),
@@ -31,6 +35,8 @@ class CategoryCard extends StatelessWidget {
 
   final String title;
   final String subtitle;
+  final double width;
+  final double height;
   final Color subtitleColor;
   final String imagePath;
   final BorderRadiusGeometry borderRadius;
@@ -41,20 +47,21 @@ class CategoryCard extends StatelessWidget {
     ThemeData theme = Theme.of(context);
 
     return Container(
-      width: assignWidth(context: context, fraction: 0.7),
+      width: width,
       child: Column(
         children: [
           Container(
+            padding: EdgeInsets.symmetric(horizontal: kPaddingHorizontal),
             decoration: BoxDecoration(
               color: backgroundColor,
               borderRadius: borderRadius,
             ),
+            width: width,
+            height: height,
             child: ClipRRect(
               borderRadius: borderRadius,
               child: Image.asset(
                 imagePath,
-                width: assignWidth(context: context, fraction: 0.7),
-                height: assignHeight(context: context, fraction: 0.25),
                 fit: BoxFit.cover,
               ),
             ),

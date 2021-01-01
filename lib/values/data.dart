@@ -75,31 +75,31 @@ class Data {
   static List<CategoryItem> categoryItems = [
     CategoryItem(
       title: StringConst.SNEAKERS,
-      imagePath: ImagePath.AIR_JORDAN_1_MID_SE,
+      imagePath: ImagePath.NIKE_SHOE_1,
       subtitle: "233",
       subtitleColor: AppColors.accentPurpleColor,
     ),
     CategoryItem(
       title: StringConst.JEWELRY,
-      imagePath: ImagePath.AIR_JORDAN_1_MID_SE,
+      imagePath: ImagePath.NIKE_SHOE_2,
       subtitle: "26",
       subtitleColor: AppColors.accentYellowColor,
     ),
     CategoryItem(
       title: StringConst.SNEAKERS,
-      imagePath: ImagePath.AIR_JORDAN_1_MID_SE,
+      imagePath: ImagePath.NIKE_SHOE_3,
       subtitle: "17",
       subtitleColor: AppColors.accentDarkGreenColor,
     ),
     CategoryItem(
       title: StringConst.SNEAKERS,
-      imagePath: ImagePath.AIR_JORDAN_1_MID_SE,
+      imagePath: ImagePath.NIKE_SHOE_4,
       subtitle: "78",
       subtitleColor: AppColors.accentOrangeColor,
     ),
     CategoryItem(
       title: StringConst.SNEAKERS,
-      imagePath: ImagePath.AIR_JORDAN_1_MID_SE,
+      imagePath: ImagePath.SHOE_5,
       subtitle: "126",
       subtitleColor: AppColors.accentPinkColor,
     ),
@@ -109,53 +109,55 @@ class Data {
     ProductDealItem(
       title: StringConst.SNEAKERS,
       subtitle: StringConst.OFF_WHITE,
-      imagePath: ImagePath.AIR_JORDAN_1_MID_SE,
-      price: "580",
+      imagePath: ImagePath.NIKE_SHOE_4,
+      price: "\$580",
     ),
     ProductDealItem(
       title: StringConst.SNEAKERS,
       subtitle: StringConst.OFF_WHITE,
-      imagePath: ImagePath.AIR_JORDAN_1_MID_SE,
-      price: "230",
+      imagePath: ImagePath.NIKE_SHOE_4,
+      price: "\$230",
     ),
     ProductDealItem(
       title: StringConst.SNEAKERS,
       subtitle: StringConst.OFF_WHITE,
-      imagePath: ImagePath.AIR_JORDAN_1_MID_SE,
-      price: "80",
+      imagePath: ImagePath.NIKE_SHOE_4,
+      price: "\$80",
     ),
     ProductDealItem(
-        title: StringConst.SNEAKERS,
-        subtitle: StringConst.OFF_WHITE,
-        imagePath: ImagePath.AIR_JORDAN_1_MID_SE,
-        price: "159"),
+      title: StringConst.SNEAKERS,
+      subtitle: StringConst.OFF_WHITE,
+      imagePath: ImagePath.NIKE_SHOE_4,
+      price: "\$159",
+    ),
     ProductDealItem(
-        title: StringConst.SNEAKERS,
-        subtitle: StringConst.OFF_WHITE,
-        imagePath: ImagePath.AIR_JORDAN_1_MID_SE,
-        price: "99"),
+      title: StringConst.SNEAKERS,
+      subtitle: StringConst.OFF_WHITE,
+      imagePath: ImagePath.NIKE_SHOE_4,
+      price: "\$99",
+    ),
   ];
 
   static List<ProductItem> productItems = [
     ProductItem(
       title: StringConst.SNEAKERS,
       imagePath: ImagePath.AIR_JORDAN_1_MID_SE,
-      price: "180",
+      price: "\$180",
     ),
     ProductItem(
       title: StringConst.SNEAKERS,
       imagePath: ImagePath.AIR_JORDAN_1_MID_SE,
-      price: "380",
+      price: "\$380",
     ),
     ProductItem(
       title: StringConst.SNEAKERS,
       imagePath: ImagePath.AIR_JORDAN_1_MID_SE,
-      price: "75",
+      price: "\$75",
     ),
     ProductItem(
       title: StringConst.SNEAKERS,
       imagePath: ImagePath.AIR_JORDAN_1_MID_SE,
-      price: "99",
+      price: "\$99",
     ),
   ];
 }
