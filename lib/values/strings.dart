@@ -38,11 +38,19 @@ class StringConst {
   static const String SNEAKERS = "Sneakers";
   static const String SHIRTS = "Shirts";
 
-  static const String TAG = "Speed Yellow";
+  static const String AIR_VAPOR_MAX = "Nike Air VaporMax";
+  static const String AIR_VAPOR_MAX_TAG = "Fly Knit";
+  static const String AIR_MAX = "Nike Air Max";
+  static const String AIR_MAX_TAG = "Max 90";
+  static const String NIKE_TC = "Nike TC 7900";
+  static const String NIKE_TC_TAG = "TC 7900";
 
   //Home Screen
   static const String HOME = "Home";
   static const String CATEGORIES = "Categories";
+  static const String NEW_ARRIVALS = "New Arrivals";
+  static const String TRENDING_NOW = "Trending Now";
+  static const String EXPLORE = "Explore";
   static const String NEW_IN = "New in";
   static const String SALE = "Sale";
   static const String PROFILE = "Profile";

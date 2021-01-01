@@ -10,7 +10,7 @@ class SectionHeading2 extends StatelessWidget {
     this.title2,
     this.title1TextStyle,
     this.title2TextStyle,
-    this.padding = const EdgeInsets.only(right: Sizes.PADDING_24),
+    this.padding = const EdgeInsets.only(right: Sizes.PADDING_16),
     this.hasTitle2 = true,
   });
 

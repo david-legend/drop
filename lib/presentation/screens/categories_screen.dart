@@ -1,9 +1,7 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:drop/presentation/layout/adaptive.dart';
 import 'package:drop/presentation/routes/router.gr.dart';
 import 'package:drop/presentation/widgets/category_card.dart';
 import 'package:drop/presentation/widgets/drop_appbar.dart';
-import 'package:drop/presentation/widgets/product_card.dart';
 import 'package:drop/presentation/widgets/product_deal_card.dart';
 import 'package:drop/presentation/widgets/section_heading_2.dart';
 import 'package:drop/presentation/widgets/spaces.dart';

@@ -75,27 +75,27 @@ class Data {
   static List<CategoryItem> categoryItems = [
     CategoryItem(
       title: StringConst.SNEAKERS,
-      imagePath: ImagePath.NIKE_SHOE_1,
+      imagePath: ImagePath.AIR_MAX_90,
       subtitle: "233",
       subtitleColor: AppColors.accentPurpleColor,
     ),
     CategoryItem(
       title: StringConst.SHIRTS,
-      imagePath: ImagePath.NIKE_SHOE_2,
+      imagePath: ImagePath.NIKE_TC_7900,
       subtitle: "26",
       subtitleColor: AppColors.accentYellowColor,
     ),
     CategoryItem(
-      title: StringConst.JEWELRY,
-      imagePath: ImagePath.NIKE_SHOE_3,
-      subtitle: "17",
-      subtitleColor: AppColors.accentDarkGreenColor,
-    ),
-    CategoryItem(
-      title: StringConst.SNEAKERS,
-      imagePath: ImagePath.NIKE_SHOE_4,
+      title: StringConst.FOOTWEAR,
+      imagePath: ImagePath.AIR_VAPOR_MAX,
       subtitle: "78",
       subtitleColor: AppColors.accentOrangeColor,
+    ),
+    CategoryItem(
+      title: StringConst.JEWELRY,
+      imagePath: ImagePath.NIKE_GREEN_SHOE,
+      subtitle: "17",
+      subtitleColor: AppColors.accentDarkGreenColor,
     ),
   ];
 
@@ -103,58 +103,58 @@ class Data {
     ProductDealItem(
       title: StringConst.SNEAKERS,
       subtitle: StringConst.OFF_WHITE,
-      imagePath: ImagePath.NIKE_SHOE_4,
+      imagePath: ImagePath.NIKE_GREEN_SHOE,
       price: "\$580",
     ),
     ProductDealItem(
       title: StringConst.SNEAKERS,
       subtitle: StringConst.OFF_WHITE,
-      imagePath: ImagePath.NIKE_SHOE_4,
+      imagePath: ImagePath.NIKE_GREEN_SHOE,
       price: "\$230",
     ),
     ProductDealItem(
       title: StringConst.SNEAKERS,
       subtitle: StringConst.OFF_WHITE,
-      imagePath: ImagePath.NIKE_SHOE_4,
+      imagePath: ImagePath.NIKE_TC_7900_SLIDE_1,
       price: "\$80",
     ),
     ProductDealItem(
       title: StringConst.SNEAKERS,
       subtitle: StringConst.OFF_WHITE,
-      imagePath: ImagePath.NIKE_SHOE_4,
+      imagePath: ImagePath.AIR_MAX_2090_SLIDE_2,
       price: "\$159",
     ),
     ProductDealItem(
       title: StringConst.SNEAKERS,
       subtitle: StringConst.OFF_WHITE,
-      imagePath: ImagePath.NIKE_SHOE_4,
+      imagePath: ImagePath.AIR_MAX_90_SLIDE_2,
       price: "\$99",
     ),
   ];
 
   static List<ProductItem> sneakers = [
     ProductItem(
-      title: StringConst.SNEAKERS,
-      imagePath: ImagePath.NIKE_SHOE_4,
+      title: StringConst.AIR_MAX,
+      imagePath: ImagePath.AIR_MAX_90,
       price: "\$125",
-      tag: StringConst.TAG,
-      images: nikeImages,
+      tag: StringConst.AIR_MAX_TAG,
+      images: airMax90Images,
       sizes: shoeSizes,
     ),
     ProductItem(
-      title: StringConst.SNEAKERS,
-      imagePath: ImagePath.NIKE_SHOE_4,
+      title: StringConst.AIR_VAPOR_MAX,
+      imagePath: ImagePath.AIR_VAPOR_MAX,
       price: "\$200",
-      tag: StringConst.TAG,
-      images: nikeImages,
+      tag: StringConst.AIR_VAPOR_MAX_TAG,
+      images: airVaporMax2090Images,
       sizes: shoeSizes,
     ),
     ProductItem(
-      title: StringConst.SNEAKERS,
-      imagePath: ImagePath.NIKE_SHOE_4,
+      title: StringConst.NIKE_TC,
+      imagePath: ImagePath.NIKE_TC_7900,
       price: "\$399",
-      tag: StringConst.TAG,
-      images: nikeImages,
+      tag: StringConst.NIKE_TC_TAG,
+      images: nikeTc7900Images,
       sizes: shoeSizes,
     ),
   ];
@@ -219,10 +219,23 @@ class Data {
     ),
   ];
 
-  static List<String> nikeImages = [
-    ImagePath.NIKE_SHOE_4,
-    ImagePath.NIKE_SHOE_4,
-    ImagePath.NIKE_SHOE_4,
-    ImagePath.NIKE_SHOE_4,
+  static List<String> airMax90Images = [
+    ImagePath.AIR_MAX_90,
+    ImagePath.AIR_MAX_90_SLIDE_1,
+    ImagePath.AIR_MAX_90_SLIDE_2,
+    ImagePath.AIR_MAX_90_SLIDE_3,
+  ];
+  static List<String> airVaporMax2090Images = [
+    ImagePath.AIR_VAPOR_MAX,
+    ImagePath.AIR_VAPOR_MAX_SLIDE_1,
+    ImagePath.AIR_VAPOR_MAX_SLIDE_2,
+    ImagePath.AIR_VAPOR_MAX_SLIDE_3,
+    ImagePath.AIR_VAPOR_MAX_SLIDE_4,
+  ];
+  static List<String> nikeTc7900Images = [
+    ImagePath.NIKE_TC_7900,
+    ImagePath.NIKE_TC_7900_SLIDE_1,
+    ImagePath.NIKE_TC_7900_SLIDE_2,
+    ImagePath.NIKE_TC_7900_SLIDE_3,
   ];
 }
