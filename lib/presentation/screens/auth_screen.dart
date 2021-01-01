@@ -135,6 +135,7 @@ class AuthScreen extends StatelessWidget {
             border: Borders.defaultPrimaryUnderlineBorder,
             enabledBorder: Borders.defaultPrimaryUnderlineBorder,
             focusedBorder: Borders.defaultPrimaryUnderlineBorder,
+            obscured: true,
             filled: false,
           ),
           Spacer(),

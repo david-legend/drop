@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:drop/presentation/layout/adaptive.dart';
 import 'package:drop/presentation/widgets/custom_appbar.dart';
 import 'package:drop/presentation/widgets/custom_button.dart';
@@ -55,7 +56,9 @@ class ProfileScreen extends StatelessWidget {
             ),
             Spacer(flex: 2),
             CustomButton(
-              onPressed: () {},
+              onPressed: () {
+                ExtendedNavigator.root.pop();
+              },
               height: Sizes.HEIGHT_60,
               borderRadiusGeometry: AppRadius.defaultButtonRadius,
               title: StringConst.EXIT,
