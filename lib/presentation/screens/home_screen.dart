@@ -80,24 +80,16 @@ class _HomeScreenState extends State<HomeScreen> {
               height: 250,
               child: ListView.separated(
                 scrollDirection: Axis.horizontal,
-                itemCount: Data.categoryItems.length,
+                itemCount: Data.newArrivalItems.length,
                 separatorBuilder: (BuildContext context, int index) {
                   return SpaceW8();
                 },
                 itemBuilder: (BuildContext context, int index) {
                   return CategoryCard(
-                    title: Data.categoryItems[index].title,
-                    subtitle: Data.categoryItems[index].subtitle,
-                    subtitleColor: Data.categoryItems[index].subtitleColor,
-                    imagePath: Data.categoryItems[index].imagePath,
-                    onTap: () {
-                      ExtendedNavigator.root.push(
-                        Routes.categoryItemScreen,
-                        arguments: CategoryItemScreenArguments(
-                          category: Data.categoryItems[index].title,
-                        ),
-                      );
-                    },
+                    title: Data.newArrivalItems[index].title,
+                    subtitle: Data.newArrivalItems[index].subtitle,
+                    subtitleColor: Data.newArrivalItems[index].subtitleColor,
+                    imagePath: Data.newArrivalItems[index].imagePath,
                   );
                 },
               ),
@@ -112,16 +104,16 @@ class _HomeScreenState extends State<HomeScreen> {
               height: 250,
               child: ListView.separated(
                 scrollDirection: Axis.horizontal,
-                itemCount: Data.productDealItems.length,
+                itemCount: Data.trendingItems.length,
                 separatorBuilder: (BuildContext context, int index) {
                   return SpaceW8();
                 },
                 itemBuilder: (BuildContext context, int index) {
                   return ProductDealCard(
-                    title: Data.productDealItems[index].title,
-                    subtitle: Data.productDealItems[index].subtitle,
-                    price: Data.productDealItems[index].price,
-                    imagePath: Data.productDealItems[index].imagePath,
+                    title: Data.trendingItems[index].title,
+                    subtitle: Data.trendingItems[index].subtitle,
+                    price: Data.trendingItems[index].price,
+                    imagePath: Data.trendingItems[index].imagePath,
                   );
                 },
               ),
@@ -135,16 +127,16 @@ class _HomeScreenState extends State<HomeScreen> {
               height: 250,
               child: ListView.separated(
                 scrollDirection: Axis.horizontal,
-                itemCount: Data.productDealItems.length,
+                itemCount: Data.exploreItems.length,
                 separatorBuilder: (BuildContext context, int index) {
                   return SpaceW8();
                 },
                 itemBuilder: (BuildContext context, int index) {
                   return ProductDealCard(
-                    title: Data.productDealItems[index].title,
-                    subtitle: Data.productDealItems[index].subtitle,
-                    price: Data.productDealItems[index].price,
-                    imagePath: Data.productDealItems[index].imagePath,
+                    title: Data.exploreItems[index].title,
+                    subtitle: Data.exploreItems[index].subtitle,
+                    price: Data.exploreItems[index].price,
+                    imagePath: Data.exploreItems[index].imagePath,
                   );
                 },
               ),
@@ -159,8 +151,11 @@ class _HomeScreenState extends State<HomeScreen> {
     scaffoldKey.currentState.openDrawer();
   }
 
-  Widget _buildDrawerItem(
-      {@required String title, Color textColor, String routeName}) {
+  Widget _buildDrawerItem({
+    @required String title,
+    Color textColor,
+    String routeName,
+  }) {
     ThemeData theme = Theme.of(context);
     return InkWell(
       onTap: () {

@@ -41,6 +41,7 @@ class _ProductScreenState extends State<ProductScreen> {
       backgroundColor: AppColors.white,
       body: Container(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
               decoration: BoxDecoration(
@@ -79,19 +80,25 @@ class _ProductScreenState extends State<ProductScreen> {
               ),
             ),
             SpaceH20(),
-            Text(
-              widget.product.title,
-              style: theme.textTheme.headline4,
+            Center(
+              child: Text(
+                widget.product.title,
+                style: theme.textTheme.headline4,
+              ),
             ),
-            Text(
-              "\"${widget.product.tag}\"",
-              style: theme.textTheme.headline4,
+            Center(
+              child: Text(
+                "\"${widget.product.tag}\"",
+                style: theme.textTheme.headline4,
+              ),
             ),
             SpaceH8(),
-            Text(
-              "${widget.product.price} ${StringConst.CURRENCY}",
-              style: theme.textTheme.headline5.copyWith(
-                fontSize: Sizes.TEXT_SIZE_28,
+            Center(
+              child: Text(
+                "${widget.product.price} ${StringConst.CURRENCY}",
+                style: theme.textTheme.headline5.copyWith(
+                  fontSize: Sizes.TEXT_SIZE_28,
+                ),
               ),
             ),
             Spacer(),

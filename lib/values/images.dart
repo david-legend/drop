@@ -44,4 +44,27 @@ class ImagePath {
 
   static const String NIKE_BLUE_SHOE = "$imageDir/nike_blue_shoe.png";
   static const String NIKE_GREEN_SHOE = "$imageDir/nike_green_shoe.png";
+
+  //Shirts
+  static const String BOMBER_JACKET_1 = "$imageDir/bomber_jacket_1.png";
+  static const String BOMBER_JACKET_2 = "$imageDir/bomber_jacket_2.png";
+  static const String BOMBER_JACKET_3 = "$imageDir/bomber_jacket_3.png";
+
+  //Suede Shirts
+  static const String SUEDE_DENIM_1 = "$imageDir/suede_denim.png";
+  static const String SUEDE_DENIM_2 = "$imageDir/suede_denim_2.png";
+  static const String SUEDE_YSL_JACKET = "$imageDir/suede_ysl_jacket.png";
+
+  //Gucci Shirts
+  static const String GUCCI_JACKET = "$imageDir/gucci_jacket.png";
+  static const String GUCCI_SHIRT = "$imageDir/gucci_shirt.png";
+  static const String GUCCI_TROUSER = "$imageDir/gucci_trouser.png";
+  static const String JEAN_SHIRT = "$imageDir/jean_shirt.png";
+
+  //Necklaces
+  static const String NECKLACE_1 = "$imageDir/necklace_1.png";
+  static const String NECKLACE_2 = "$imageDir/necklace_2.png";
+  static const String NECKLACE_3 = "$imageDir/necklace_3.png";
+  static const String NECKLACE_4 = "$imageDir/necklace_4.png";
+  static const String NECKLACE_5 = "$imageDir/necklace_5.png";
 }

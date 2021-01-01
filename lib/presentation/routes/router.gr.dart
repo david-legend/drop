@@ -7,7 +7,7 @@
 // ignore_for_file: public_member_api_docs
 
 import 'package:auto_route/auto_route.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
 import '../screens/auth_screen.dart';
 import '../screens/categories_screen.dart';
@@ -65,63 +65,63 @@ class AppRouter extends RouterBase {
   Map<Type, AutoRouteFactory> get pagesMap => _pagesMap;
   final _pagesMap = <Type, AutoRouteFactory>{
     SplashScreen: (data) {
-      return MaterialPageRoute<dynamic>(
+      return CupertinoPageRoute<dynamic>(
         builder: (context) => SplashScreen(),
         settings: data,
       );
     },
     AuthScreen: (data) {
-      return MaterialPageRoute<dynamic>(
+      return CupertinoPageRoute<dynamic>(
         builder: (context) => AuthScreen(),
         settings: data,
       );
     },
     VerificationScreen: (data) {
-      return MaterialPageRoute<dynamic>(
+      return CupertinoPageRoute<dynamic>(
         builder: (context) => VerificationScreen(),
         settings: data,
       );
     },
     SignUpScreen: (data) {
-      return MaterialPageRoute<dynamic>(
+      return CupertinoPageRoute<dynamic>(
         builder: (context) => SignUpScreen(),
         settings: data,
       );
     },
     InterestScreen: (data) {
-      return MaterialPageRoute<dynamic>(
+      return CupertinoPageRoute<dynamic>(
         builder: (context) => InterestScreen(),
         settings: data,
       );
     },
     HomeScreen: (data) {
-      return MaterialPageRoute<dynamic>(
+      return CupertinoPageRoute<dynamic>(
         builder: (context) => HomeScreen(),
         settings: data,
       );
     },
     CategoriesScreen: (data) {
-      return MaterialPageRoute<dynamic>(
+      return CupertinoPageRoute<dynamic>(
         builder: (context) => CategoriesScreen(),
         settings: data,
       );
     },
     CategoryItemScreen: (data) {
       final args = data.getArgs<CategoryItemScreenArguments>(nullOk: false);
-      return MaterialPageRoute<dynamic>(
+      return CupertinoPageRoute<dynamic>(
         builder: (context) => CategoryItemScreen(args.category),
         settings: data,
       );
     },
     ProductScreen: (data) {
       final args = data.getArgs<ProductScreenArguments>(nullOk: false);
-      return MaterialPageRoute<dynamic>(
+      return CupertinoPageRoute<dynamic>(
         builder: (context) => ProductScreen(args.product),
         settings: data,
       );
     },
     ProfileScreen: (data) {
-      return MaterialPageRoute<dynamic>(
+      return CupertinoPageRoute<dynamic>(
         builder: (context) => ProfileScreen(),
         settings: data,
       );

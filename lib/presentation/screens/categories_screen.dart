@@ -84,23 +84,23 @@ class CategoriesScreen extends StatelessWidget {
             ),
             SpaceH20(),
             SectionHeading2(
-              title1: StringConst.NEWEST,
+              title1: StringConst.LATEST,
               title2: StringConst.SEE_ALL,
             ),
             Container(
               height: 250,
               child: ListView.separated(
                 scrollDirection: Axis.horizontal,
-                itemCount: Data.productDealItems.length,
+                itemCount: Data.productLatestItems.length,
                 separatorBuilder: (BuildContext context, int index) {
                   return SpaceW8();
                 },
                 itemBuilder: (BuildContext context, int index) {
                   return ProductDealCard(
-                    title: Data.productDealItems[index].title,
-                    subtitle: Data.productDealItems[index].subtitle,
-                    price: Data.productDealItems[index].price,
-                    imagePath: Data.productDealItems[index].imagePath,
+                    title: Data.productLatestItems[index].title,
+                    subtitle: Data.productLatestItems[index].subtitle,
+                    price: Data.productLatestItems[index].price,
+                    imagePath: Data.productLatestItems[index].imagePath,
                   );
                 },
               ),

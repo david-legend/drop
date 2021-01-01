@@ -10,23 +10,23 @@ import 'package:drop/presentation/screens/sign_up_screen.dart';
 import 'package:drop/presentation/screens/splash_screen.dart';
 import 'package:drop/presentation/screens/verification_screen.dart';
 
-@MaterialAutoRouter(
+@CupertinoAutoRouter(
   routes: <AutoRoute>[
     // initial route is named "/"
-    MaterialRoute(page: SplashScreen, initial: true),
+    CupertinoRoute(page: SplashScreen, initial: true),
 
     //OnBoarding and AuthenticationScreens
-    MaterialRoute(page: AuthScreen),
-    MaterialRoute(page: VerificationScreen),
-    MaterialRoute(page: SignUpScreen),
-    MaterialRoute(page: InterestScreen),
+    CupertinoRoute(page: AuthScreen),
+    CupertinoRoute(page: VerificationScreen),
+    CupertinoRoute(page: SignUpScreen),
+    CupertinoRoute(page: InterestScreen),
 
     //Inside App
-    MaterialRoute(page: HomeScreen),
-    MaterialRoute(page: CategoriesScreen),
-    MaterialRoute(page: CategoryItemScreen),
-    MaterialRoute(page: ProductScreen),
-    MaterialRoute(page: ProfileScreen),
+    CupertinoRoute(page: HomeScreen),
+    CupertinoRoute(page: CategoriesScreen),
+    CupertinoRoute(page: CategoryItemScreen),
+    CupertinoRoute(page: ProductScreen),
+    CupertinoRoute(page: ProfileScreen),
   ],
 )
 class $AppRouter {}

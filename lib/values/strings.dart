@@ -45,6 +45,15 @@ class StringConst {
   static const String NIKE_TC = "Nike TC 7900";
   static const String NIKE_TC_TAG = "TC 7900";
 
+  static const String AIR_BLUE = "Air-Blue";
+  static const String NIKE_BLUE = "Nike Air-Blue";
+
+  static const String AIR_GREEN = "Air-Green";
+  static const String NIKE_GREEN = "Nike Air-Green";
+  static const String TROUSERS = "Trousers";
+  static const String YSL_JACKET = "YSL Jacket";
+  static const String YSL_JACKET_TAG = "Winter Jacket";
+
   //Home Screen
   static const String HOME = "Home";
   static const String CATEGORIES = "Categories";
@@ -69,7 +78,27 @@ class StringConst {
 
   //Categories Screen
   static const String TOP_DEALS = "Top Deals";
-  static const String NEWEST = "Newest";
+  static const String LATEST = "Latest";
+
+  static const String YSL_SUEDE_DENIM = "YSL Suede Jacket";
+  static const String SUEDE_DENIM = "Suede Jacket Jacket";
+  static const String SUEDE_DENIM_TAG = "Suede Denim";
+  static const String BOMBER_JACKET = "Bomber Jacket";
+  static const String BOMBER_JACKET_TAG = "Bomber Jacket";
+  static const String GUCCI_JACKET = "Gucci Jacket";
+  static const String GUCCI_JACKET_TAG = "Gucci Jacket";
+  static const String GUCCI_SHIRT = "Gucci Jacket";
+  static const String GUCCI_TROUSERS = "Gucci Jacket";
+  static const String GUCCI_JEANS_SHIRT = "Jeans Shirt";
+  static const String SWAG = "Swagged Out";
+
+  static const String MERMAID_NECKLACE = "Mermaid";
+  static const String NECKLACE_1 = "Silver Necklace";
+  static const String NECKLACE_1_TAG = "Necklace";
+  static const String NECKLACE_2 = "Love Necklace";
+  static const String NECKLACE_2_TAG = "Necklace";
+  static const String NECKLACE_3 = "Banana Necklace";
+  static const String NECKLACE_3_TAG = "Necklace";
 
   //Category Item Screen
   static const String CURRENCY = "USD";
