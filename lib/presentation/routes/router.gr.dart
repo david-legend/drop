@@ -16,7 +16,6 @@ import '../screens/home_screen.dart';
 import '../screens/interest_screen.dart';
 import '../screens/product_screen.dart';
 import '../screens/profile_screen.dart';
-import '../screens/sign_up_screen.dart';
 import '../screens/splash_screen.dart';
 import '../screens/verification_screen.dart';
 import '../widgets/product_card.dart';
@@ -25,7 +24,6 @@ class Routes {
   static const String splashScreen = '/';
   static const String authScreen = '/auth-screen';
   static const String verificationScreen = '/verification-screen';
-  static const String signUpScreen = '/sign-up-screen';
   static const String interestScreen = '/interest-screen';
   static const String homeScreen = '/home-screen';
   static const String categoriesScreen = '/categories-screen';
@@ -36,7 +34,6 @@ class Routes {
     splashScreen,
     authScreen,
     verificationScreen,
-    signUpScreen,
     interestScreen,
     homeScreen,
     categoriesScreen,
@@ -53,7 +50,6 @@ class AppRouter extends RouterBase {
     RouteDef(Routes.splashScreen, page: SplashScreen),
     RouteDef(Routes.authScreen, page: AuthScreen),
     RouteDef(Routes.verificationScreen, page: VerificationScreen),
-    RouteDef(Routes.signUpScreen, page: SignUpScreen),
     RouteDef(Routes.interestScreen, page: InterestScreen),
     RouteDef(Routes.homeScreen, page: HomeScreen),
     RouteDef(Routes.categoriesScreen, page: CategoriesScreen),
@@ -79,12 +75,6 @@ class AppRouter extends RouterBase {
     VerificationScreen: (data) {
       return CupertinoPageRoute<dynamic>(
         builder: (context) => VerificationScreen(),
-        settings: data,
-      );
-    },
-    SignUpScreen: (data) {
-      return CupertinoPageRoute<dynamic>(
-        builder: (context) => SignUpScreen(),
         settings: data,
       );
     },

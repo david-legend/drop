@@ -6,7 +6,6 @@ import 'package:drop/presentation/screens/category_item_screen.dart';
 import 'package:drop/presentation/screens/home_screen.dart';
 import 'package:drop/presentation/screens/interest_screen.dart';
 import 'package:drop/presentation/screens/product_screen.dart';
-import 'package:drop/presentation/screens/sign_up_screen.dart';
 import 'package:drop/presentation/screens/splash_screen.dart';
 import 'package:drop/presentation/screens/verification_screen.dart';
 
@@ -18,7 +17,6 @@ import 'package:drop/presentation/screens/verification_screen.dart';
     //OnBoarding and AuthenticationScreens
     CupertinoRoute(page: AuthScreen),
     CupertinoRoute(page: VerificationScreen),
-    CupertinoRoute(page: SignUpScreen),
     CupertinoRoute(page: InterestScreen),
 
     //Inside App
