@@ -34,8 +34,10 @@ class Borders {
     );
   }
 
-  static const BorderSide defaultPrimaryBorder =
-      BorderSide(width: Sizes.WIDTH_0, style: BorderStyle.none);
+  static const BorderSide defaultPrimaryBorder = BorderSide(
+    width: Sizes.WIDTH_0,
+    style: BorderStyle.none,
+  );
 
   static const UnderlineInputBorder noBorder = UnderlineInputBorder(
     borderSide: BorderSide(

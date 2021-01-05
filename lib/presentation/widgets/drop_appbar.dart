@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 
 import 'drop_logo.dart';
+import 'fliter_bottom_sheet.dart';
 
 class MenuItem {
   MenuItem({@required this.title, this.textColor, this.routeName});
@@ -102,6 +103,7 @@ class TrailingIcons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Radius borderRadius = const Radius.circular(Sizes.RADIUS_30);
     double widthOfTrailIcons =
         width ?? assignWidth(context: context, fraction: 0.6);
     double heightOfTrailIcons =
@@ -134,9 +136,26 @@ class TrailingIcons extends StatelessWidget {
             FeatherIcons.search,
             color: AppColors.accentPinkColor,
           ),
-          Icon(
-            FeatherIcons.sliders,
-            color: AppColors.accentYellowColor,
+          InkWell(
+            onTap: () {
+              showBottomSheet<void>(
+                context: context,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.only(
+                    topLeft: borderRadius,
+                    topRight: borderRadius,
+                  ),
+                ),
+                builder: (_) => FilterBottomSheet(
+                  brands: Data.brands,
+                  colors: Data.colors,
+                ),
+              );
+            },
+            child: Icon(
+              FeatherIcons.sliders,
+              color: AppColors.accentYellowColor,
+            ),
           ),
           Container(
             padding: EdgeInsets.all(Sizes.PADDING_8),

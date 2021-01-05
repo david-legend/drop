@@ -427,4 +427,58 @@ class Data {
   static List<String> bananaNecklace = [
     ImagePath.NECKLACE_5,
   ];
+
+  static List<Color> colors = [
+    AppColors.accentPurpleColor,
+    AppColors.accentPinkColor,
+    AppColors.accentYellowColor,
+    AppColors.accentDarkGreenColor,
+    AppColors.accentOrangeColor,
+    AppColors.primaryColor,
+    AppColors.secondaryColor2,
+    AppColors.secondaryColor,
+  ];
+
+  static List<BrandItem> brands = [
+    BrandItem(
+      brand: StringConst.NIKE,
+      imagePath: ImagePath.NIKE_SWOOSH,
+      color: AppColors.accentPurpleColor,
+    ),
+    BrandItem(
+      brand: StringConst.ADIDAS,
+      imagePath: ImagePath.ADIDAS,
+      color: AppColors.accentPinkColor,
+    ),
+    BrandItem(
+      brand: StringConst.JORDAN,
+      imagePath: ImagePath.JORDAN,
+      color: AppColors.accentYellowColor,
+    ),
+    BrandItem(
+      brand: StringConst.NEW_BALANCE,
+      imagePath: ImagePath.NEW_BALANCE,
+      color: AppColors.accentDarkGreenColor,
+    ),
+    BrandItem(
+      brand: StringConst.PUMA,
+      imagePath: ImagePath.PUMA,
+      color: AppColors.accentOrangeColor,
+    ),
+    BrandItem(
+      brand: StringConst.REEBOK,
+      imagePath: ImagePath.REEBOK,
+      color: AppColors.accentPurpleColor,
+    ),
+    BrandItem(
+      brand: StringConst.TIMBERLAND,
+      imagePath: ImagePath.TIMBERLAND,
+      color: AppColors.accentDarkGreenColor,
+    ),
+    BrandItem(
+      brand: StringConst.KSWISS,
+      imagePath: ImagePath.KSWISS,
+      color: AppColors.accentOrangeColor,
+    ),
+  ];
 }

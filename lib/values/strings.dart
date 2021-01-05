@@ -117,6 +117,24 @@ class StringConst {
   static const String SIGN_UP_WITH_FACEBOOK = "Sign up with Facebook";
   static const String SIGN_UP = "Sign up";
 
+  //Filter BottomSheet
+  static const String FILTER = "Filters";
+  static const String PRICE = "Price";
+  static const String GENDER = "Gender";
+  static const String MEN = "Men";
+  static const String WOMEN = "Women";
+  static const String BRAND = "Brand";
+  static const String COLOR = "Color";
+
+  //BRANDS
+  static const String JORDAN = "Jordan";
+  static const String KSWISS = "Kswiss";
+  static const String NEW_BALANCE = "New Balance";
+  static const String NIKE_SWOOSH = "Nike";
+  static const String PUMA = "Puma";
+  static const String REEBOK = "Reebok";
+  static const String TIMBERLAND = "Timberland";
+
   //hint_text
   static const String FULL_NAME = "Full Name";
   static const String PASSWORD = "Password";

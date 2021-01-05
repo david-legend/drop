@@ -67,4 +67,14 @@ class ImagePath {
   static const String NECKLACE_3 = "$imageDir/necklace_3.png";
   static const String NECKLACE_4 = "$imageDir/necklace_4.png";
   static const String NECKLACE_5 = "$imageDir/necklace_5.png";
+
+  //Brands
+  static const String ADIDAS = "$imageDir/adidas.png";
+  static const String JORDAN = "$imageDir/jordan.png";
+  static const String KSWISS = "$imageDir/kswiss.png";
+  static const String NEW_BALANCE = "$imageDir/new_balance.png";
+  static const String NIKE_SWOOSH = "$imageDir/nike_swoosh.png";
+  static const String PUMA = "$imageDir/puma.png";
+  static const String REEBOK = "$imageDir/reebok.png";
+  static const String TIMBERLAND = "$imageDir/timberland.png";
 }
