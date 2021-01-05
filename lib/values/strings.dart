@@ -113,6 +113,8 @@ class StringConst {
   static const String LOG_IN_2 = "Login";
   static const String LOG_IN_WITH_GOOGLE = "Login with Google";
   static const String LOG_IN_WITH_FACEBOOK = "Login with Facebook";
+  static const String SIGN_UP_WITH_GOOGLE = "Sign up with Google";
+  static const String SIGN_UP_WITH_FACEBOOK = "Sign up with Facebook";
   static const String SIGN_UP = "Sign up";
 
   //hint_text

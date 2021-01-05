@@ -85,7 +85,7 @@ class AuthScreen extends StatelessWidget {
                       child: TabBarView(
                         children: [
                           _buildLogin(context),
-                          _buildLogin(context),
+                          _buildSignUp(context),
                         ],
                       ),
                     ),
@@ -192,7 +192,84 @@ class AuthScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildSignUp() {
-    return Container();
+  Widget _buildSignUp(BuildContext context) {
+    ThemeData theme = Theme.of(context);
+    TextStyle hintTextStyle = theme.textTheme.subtitle1;
+    TextStyle formTextStyle = theme.textTheme.subtitle1;
+
+    return Container(
+      padding: const EdgeInsets.only(left: kPadding),
+      child: Column(
+        children: [
+          CustomTextFormField(
+            textFormFieldStyle: formTextStyle,
+            hintText: StringConst.EMAIL_2,
+            prefixIconColor: AppColors.primaryColor,
+            hintTextStyle: hintTextStyle,
+            border: Borders.defaultPrimaryUnderlineBorder,
+            enabledBorder: Borders.defaultPrimaryUnderlineBorder,
+            focusedBorder: Borders.defaultPrimaryUnderlineBorder,
+            filled: false,
+          ),
+          SpaceH16(),
+          CustomTextFormField(
+            textFormFieldStyle: formTextStyle,
+            hintText: StringConst.PASSWORD,
+            prefixIconColor: AppColors.primaryColor,
+            hintTextStyle: hintTextStyle,
+            border: Borders.defaultPrimaryUnderlineBorder,
+            enabledBorder: Borders.defaultPrimaryUnderlineBorder,
+            focusedBorder: Borders.defaultPrimaryUnderlineBorder,
+            obscured: true,
+            filled: false,
+          ),
+          SpaceH16(),
+          CustomTextFormField(
+            textFormFieldStyle: formTextStyle,
+            hintText: StringConst.CONFIRM_PASSWORD,
+            prefixIconColor: AppColors.primaryColor,
+            hintTextStyle: hintTextStyle,
+            border: Borders.defaultPrimaryUnderlineBorder,
+            enabledBorder: Borders.defaultPrimaryUnderlineBorder,
+            focusedBorder: Borders.defaultPrimaryUnderlineBorder,
+            obscured: true,
+            filled: false,
+          ),
+          Spacer(),
+          DropButton(
+            onTap: () {
+              ExtendedNavigator.root.push(Routes.verificationScreen);
+            },
+            height: Sizes.HEIGHT_60,
+            borderRadiusGeometry: AppRadius.defaultButtonRadius,
+            title: StringConst.SIGN_UP,
+            textStyle: theme.textTheme.subtitle1.copyWith(
+              color: AppColors.white,
+            ),
+          ),
+          SpaceH16(),
+          CustomButton(
+            onPressed: () {},
+            height: Sizes.HEIGHT_60,
+            borderRadiusGeometry: AppRadius.defaultButtonRadius,
+            title: StringConst.SIGN_UP_WITH_GOOGLE,
+            color: AppColors.white,
+            borderSide: Borders.defaultButtonBorder,
+            textStyle: theme.textTheme.subtitle1,
+          ),
+          SpaceH16(),
+          CustomButton(
+            onPressed: () {},
+            height: Sizes.HEIGHT_60,
+            borderRadiusGeometry: AppRadius.defaultButtonRadius,
+            title: StringConst.SIGN_UP_WITH_FACEBOOK,
+            color: AppColors.white,
+            borderSide: Borders.defaultButtonBorder,
+            textStyle: theme.textTheme.subtitle1,
+          ),
+          Spacer(),
+        ],
+      ),
+    );
   }
 }

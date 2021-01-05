@@ -1,7 +1,5 @@
 import 'package:drop/values/values.dart';
 import 'package:flutter/material.dart';
-import 'package:drop/presentation/widgets/spaces.dart';
-import 'package:drop/values/values.dart';
 
 const List<Color> buttonColors = [
   AppColors.accentOrangeColor,
