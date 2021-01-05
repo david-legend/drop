@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:bubble_tab_indicator/bubble_tab_indicator.dart';
 import 'package:drop/presentation/layout/adaptive.dart';
 import 'package:drop/presentation/routes/router.gr.dart';
+import 'package:drop/presentation/widgets/CustomBubbleTabIndicator.dart';
 import 'package:drop/presentation/widgets/custom_button.dart';
 import 'package:drop/presentation/widgets/custom_text_form_field.dart';
 import 'package:drop/presentation/widgets/drop_button.dart';
@@ -66,7 +67,7 @@ class AuthScreen extends StatelessWidget {
                             theme.textTheme.subtitle1.copyWith(
                           color: AppColors.accentPurpleColor,
                         ),
-                        indicator: BubbleTabIndicator(
+                        indicator: CustomBubbleTabIndicator(
                           indicatorHeight: Sizes.HEIGHT_40,
                           indicatorColor: AppColors.white,
                           tabBarIndicatorSize: TabBarIndicatorSize.tab,
@@ -76,7 +77,7 @@ class AuthScreen extends StatelessWidget {
                             text: StringConst.LOG_IN_2.toUpperCase(),
                           ),
                           Tab(
-                            text: StringConst.SIGN_UP,
+                            text: StringConst.SIGN_UP.toUpperCase(),
                           ),
                         ],
                       ),
