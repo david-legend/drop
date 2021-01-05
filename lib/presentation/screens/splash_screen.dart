@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:drop/presentation/routes/router.gr.dart';
-import 'package:drop/presentation/widgets/spaces.dart';
+import 'package:drop/presentation/widgets/drop_logo.dart';
+import 'package:drop/values/values.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -28,28 +29,18 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Text(
-              "Logo Goes Here",
-              style: Theme.of(context).textTheme.headline5,
-            ),
-            SpaceH16(),
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: 75),
-              child: Center(
-                child: Placeholder(
-                  fallbackWidth: 150,
-                  fallbackHeight: 150,
-                  strokeWidth: 1,
-                ),
-              ),
-            ),
-          ],
+          child: Center(
+        child: DropLogo(
+          width: 200,
+          height: 200,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(Sizes.RADIUS_20),
+            bottomLeft: Radius.circular(Sizes.RADIUS_20),
+            bottomRight: Radius.circular(Sizes.RADIUS_100),
+            topRight: Radius.circular(Sizes.RADIUS_100),
+          ),
         ),
-      ),
+      )),
     );
   }
 }

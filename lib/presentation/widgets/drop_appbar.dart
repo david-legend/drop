@@ -4,6 +4,8 @@ import 'package:drop/values/values.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 
+import 'drop_logo.dart';
+
 class MenuItem {
   MenuItem({@required this.title, this.textColor, this.routeName});
 
@@ -34,10 +36,11 @@ class DropAppBar extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      "D",
-                      style: theme.textTheme.headline3,
+                    DropLogo(
+                      width: 30,
+                      height: 30,
                     ),
+                    SpaceH8(),
                     PanCakeIcon(),
                   ],
                 ),
@@ -52,7 +55,7 @@ class DropAppBar extends StatelessWidget {
 class PanCakeIcon extends StatelessWidget {
   PanCakeIcon({
     this.width = 30,
-    this.height = 4,
+    this.height = 3,
     this.color = AppColors.primaryColor,
     this.borderRadius = const BorderRadius.all(const Radius.circular(20)),
   });

@@ -4,6 +4,8 @@ import 'package:drop/presentation/layout/adaptive.dart';
 import 'package:drop/presentation/routes/router.gr.dart';
 import 'package:drop/presentation/widgets/custom_button.dart';
 import 'package:drop/presentation/widgets/custom_text_form_field.dart';
+import 'package:drop/presentation/widgets/drop_button.dart';
+import 'package:drop/presentation/widgets/drop_logo.dart';
 import 'package:drop/presentation/widgets/spaces.dart';
 import 'package:drop/values/values.dart';
 import 'package:flutter/material.dart';
@@ -15,6 +17,8 @@ class AuthScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ThemeData theme = Theme.of(context);
+    double logoSize = Sizes.WIDTH_100;
+    double widthOfScreen = assignWidth(context: context, fraction: 1);
     double heightOfScreen =
         assignHeight(context: context, fraction: 1) - Sizes.SAFE_AREA_MARGIN;
     return DefaultTabController(
@@ -24,10 +28,22 @@ class AuthScreen extends StatelessWidget {
           padding: EdgeInsets.only(top: Sizes.SAFE_AREA_MARGIN),
           child: ListView(
             children: [
-              Container(
-                height: heightOfScreen * 0.3,
-//              color: Colors.red,
-                child: _buildLogo(context),
+              SizedBox(
+                height: heightOfScreen * 0.05,
+              ),
+              Center(
+                child: Column(
+                  children: [
+                    DropLogo(),
+                    Text(
+                      StringConst.APP_NAME.toUpperCase(),
+                      style: theme.textTheme.headline4,
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: heightOfScreen * 0.05,
               ),
               Container(
                 height: heightOfScreen * 0.7,
@@ -139,8 +155,8 @@ class AuthScreen extends StatelessWidget {
             filled: false,
           ),
           Spacer(),
-          CustomButton(
-            onPressed: () {
+          DropButton(
+            onTap: () {
               ExtendedNavigator.root.push(Routes.verificationScreen);
             },
             height: Sizes.HEIGHT_60,
