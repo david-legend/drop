@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route_annotations.dart';
+import 'package:drop/presentation/screens/check_out_screen.dart';
 import 'package:drop/presentation/screens/profile_screen.dart';
 import 'package:drop/presentation/screens/auth_screen.dart';
 import 'package:drop/presentation/screens/categories_screen.dart';
@@ -25,6 +26,7 @@ import 'package:drop/presentation/screens/verification_screen.dart';
     CupertinoRoute(page: CategoryItemScreen),
     CupertinoRoute(page: ProductScreen),
     CupertinoRoute(page: ProfileScreen),
+    CupertinoRoute(page: CheckOutScreen),
   ],
 )
 class $AppRouter {}

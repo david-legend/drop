@@ -57,6 +57,7 @@ class StringConst {
   //Home Screen
   static const String HOME = "Home";
   static const String CATEGORIES = "Categories";
+  static const String CHECK_OUT = "Check Out";
   static const String NEW_ARRIVALS = "New Arrivals";
   static const String TRENDING_NOW = "Trending Now";
   static const String EXPLORE = "Explore";
@@ -79,6 +80,12 @@ class StringConst {
   //Categories Screen
   static const String TOP_DEALS = "Top Deals";
   static const String LATEST = "Latest";
+
+  //Checkout Screen
+  static const String REMOVED = "removed";
+  static const String UNDO = "Undo";
+  static const String TOTAL = "Total";
+  static const String TOTAL_AMOUNT = "\$1475";
 
   static const String YSL_SUEDE_DENIM = "YSL Suede Jacket";
   static const String SUEDE_DENIM = "Suede Jacket Jacket";

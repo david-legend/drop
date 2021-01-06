@@ -481,4 +481,25 @@ class Data {
       color: AppColors.accentOrangeColor,
     ),
   ];
+
+  static List<CheckOutItem> checkOutItems = [
+    CheckOutItem(
+      title: StringConst.AIR_VAPOR_MAX,
+      imagePath: ImagePath.AIR_VAPOR_MAX,
+      price: "200",
+      quantity: "1",
+    ),
+    CheckOutItem(
+      title: StringConst.GUCCI_SHIRT,
+      imagePath: ImagePath.GUCCI_SHIRT,
+      price: "1025",
+      quantity: "1",
+    ),
+    CheckOutItem(
+      title: StringConst.NECKLACE_3,
+      imagePath: ImagePath.NECKLACE_5,
+      price: "125",
+      quantity: "2",
+    ),
+  ];
 }

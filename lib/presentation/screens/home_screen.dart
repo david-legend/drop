@@ -44,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Icon(
                       FeatherIcons.x,
                       color: AppColors.primaryColor,
-                      size: 36,
+                      size: Sizes.ICON_SIZE_30,
                     ),
                   ),
                 ),

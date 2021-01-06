@@ -12,6 +12,7 @@ import 'package:flutter/cupertino.dart';
 import '../screens/auth_screen.dart';
 import '../screens/categories_screen.dart';
 import '../screens/category_item_screen.dart';
+import '../screens/check_out_screen.dart';
 import '../screens/home_screen.dart';
 import '../screens/interest_screen.dart';
 import '../screens/product_screen.dart';
@@ -30,6 +31,7 @@ class Routes {
   static const String categoryItemScreen = '/category-item-screen';
   static const String productScreen = '/product-screen';
   static const String profileScreen = '/profile-screen';
+  static const String checkOutScreen = '/check-out-screen';
   static const all = <String>{
     splashScreen,
     authScreen,
@@ -40,6 +42,7 @@ class Routes {
     categoryItemScreen,
     productScreen,
     profileScreen,
+    checkOutScreen,
   };
 }
 
@@ -56,6 +59,7 @@ class AppRouter extends RouterBase {
     RouteDef(Routes.categoryItemScreen, page: CategoryItemScreen),
     RouteDef(Routes.productScreen, page: ProductScreen),
     RouteDef(Routes.profileScreen, page: ProfileScreen),
+    RouteDef(Routes.checkOutScreen, page: CheckOutScreen),
   ];
   @override
   Map<Type, AutoRouteFactory> get pagesMap => _pagesMap;
@@ -113,6 +117,12 @@ class AppRouter extends RouterBase {
     ProfileScreen: (data) {
       return CupertinoPageRoute<dynamic>(
         builder: (context) => ProfileScreen(),
+        settings: data,
+      );
+    },
+    CheckOutScreen: (data) {
+      return CupertinoPageRoute<dynamic>(
+        builder: (context) => CheckOutScreen(),
         settings: data,
       );
     },

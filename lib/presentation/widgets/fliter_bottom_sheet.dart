@@ -20,6 +20,7 @@ class BrandItem {
 
 //TODO:: add correct thumb color for rangeSlider
 //TODO:: Fix gender buttons
+//TODO:: Dismiss bottomSheet when you tap outside
 class FilterBottomSheet extends StatefulWidget {
   final List<BrandItem> brands;
   final List<Color> colors;

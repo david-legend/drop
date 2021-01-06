@@ -1,4 +1,6 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:drop/presentation/layout/adaptive.dart';
+import 'package:drop/presentation/routes/router.gr.dart';
 import 'package:drop/presentation/widgets/spaces.dart';
 import 'package:drop/values/values.dart';
 import 'package:flutter/material.dart';
@@ -152,25 +154,33 @@ class TrailingIcons extends StatelessWidget {
                 ),
               );
             },
-            child: Icon(
-              FeatherIcons.sliders,
-              color: AppColors.accentYellowColor,
-            ),
-          ),
-          Container(
-            padding: EdgeInsets.all(Sizes.PADDING_8),
-            decoration: BoxDecoration(
-              color: AppColors.primaryColor,
-              borderRadius: const BorderRadius.all(
-                const Radius.circular(
-                  Sizes.RADIUS_8,
-                ),
+            child: Padding(
+              padding: const EdgeInsets.all(Sizes.PADDING_8),
+              child: Icon(
+                FeatherIcons.sliders,
+                color: AppColors.accentYellowColor,
               ),
             ),
-            child: Icon(
-              FeatherIcons.shoppingBag,
-              size: Sizes.ICON_SIZE_18,
-              color: AppColors.white,
+          ),
+          InkWell(
+            onTap: () {
+              ExtendedNavigator.root.push(Routes.checkOutScreen);
+            },
+            child: Container(
+              padding: EdgeInsets.all(Sizes.PADDING_8),
+              decoration: BoxDecoration(
+                color: AppColors.primaryColor,
+                borderRadius: const BorderRadius.all(
+                  const Radius.circular(
+                    Sizes.RADIUS_8,
+                  ),
+                ),
+              ),
+              child: Icon(
+                FeatherIcons.shoppingBag,
+                size: Sizes.ICON_SIZE_18,
+                color: AppColors.white,
+              ),
             ),
           ),
         ],
