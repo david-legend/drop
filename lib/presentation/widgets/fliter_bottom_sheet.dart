@@ -19,8 +19,6 @@ class BrandItem {
 }
 
 //TODO:: add correct thumb color for rangeSlider
-//TODO:: Fix gender buttons
-//TODO:: Dismiss bottomSheet when you tap outside
 class FilterBottomSheet extends StatefulWidget {
   final List<BrandItem> brands;
   final List<Color> colors;
@@ -35,13 +33,13 @@ class FilterBottomSheet extends StatefulWidget {
 }
 
 class _FilterBottomSheetState extends State<FilterBottomSheet> {
+  RangeValues _currentRangeValues = const RangeValues(0, 399);
   bool isMaleSelected = true;
   bool isFemaleSelected = false;
 
   @override
   Widget build(BuildContext context) {
     ThemeData theme = Theme.of(context);
-    RangeValues _currentRangeValues = const RangeValues(0, 1000);
     TextStyle selectedStyle = theme.textTheme.subtitle1.copyWith(
       color: AppColors.white,
     );
@@ -59,7 +57,7 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
             top: Sizes.PADDING_12,
             left: Sizes.PADDING_24,
             right: Sizes.PADDING_24,
-            bottom: Sizes.PADDING_16,
+            bottom: Sizes.PADDING_24,
           ),
           children: [
             Center(child: ContainerHandle()),
@@ -85,7 +83,7 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
                 thumbColor: AppColors.accentPurpleColor,
                 valueIndicatorTextStyle: theme.textTheme.bodyText1,
                 valueIndicatorColor: AppColors.secondaryColor,
-                disabledThumbColor: AppColors.accentDarkGreenColor,
+                disabledThumbColor: AppColors.accentYellowColor,
               ),
               child: RangeSlider(
                 values: _currentRangeValues,
@@ -103,14 +101,14 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
                 },
               ),
             ),
-            SpaceH16(),
+            SpaceH24(),
             Center(
               child: Text(
                 StringConst.GENDER,
                 style: theme.textTheme.headline6,
               ),
             ),
-            SpaceH16(),
+            SpaceH24(),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -119,7 +117,6 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
                   child: CustomButton(
                     onPressed: () => flipGender(
                       maleState: isMaleSelected,
-                      femaleState: isFemaleSelected,
                     ),
                     height: Sizes.HEIGHT_48,
                     borderRadius: Sizes.RADIUS_8,
@@ -137,7 +134,6 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
                   width: assignWidth(context: context, fraction: 0.3),
                   child: CustomButton(
                     onPressed: () => flipGender(
-                      maleState: isMaleSelected,
                       femaleState: isFemaleSelected,
                     ),
                     height: Sizes.HEIGHT_48,
@@ -155,14 +151,14 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
                 ),
               ],
             ),
-            SpaceH16(),
+            SpaceH24(),
             Center(
               child: Text(
                 StringConst.BRAND,
                 style: theme.textTheme.headline6,
               ),
             ),
-            SpaceH16(),
+            SpaceH24(),
             Container(
               height: Sizes.HEIGHT_60,
               child: ListView.separated(
@@ -195,14 +191,14 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
                 },
               ),
             ),
-            SpaceH20(),
+            SpaceH24(),
             Center(
               child: Text(
                 StringConst.COLOR,
                 style: theme.textTheme.headline6,
               ),
             ),
-            SpaceH16(),
+            SpaceH24(),
             Container(
               height: Sizes.HEIGHT_60,
               child: ListView.separated(
@@ -234,13 +230,20 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
   }
 
   void flipGender({
-    @required bool maleState,
-    @required bool femaleState,
+    bool maleState,
+    bool femaleState,
   }) {
-//    if()
-    setState(() {
-      isMaleSelected = maleState;
-      isFemaleSelected = femaleState;
-    });
+    if (maleState != null && maleState == false) {
+      setState(() {
+        isMaleSelected = !maleState;
+        isFemaleSelected = maleState;
+      });
+    }
+    if (femaleState != null && femaleState == false) {
+      setState(() {
+        isMaleSelected = femaleState;
+        isFemaleSelected = !femaleState;
+      });
+    }
   }
 }

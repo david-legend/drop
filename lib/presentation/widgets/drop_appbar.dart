@@ -140,7 +140,7 @@ class TrailingIcons extends StatelessWidget {
           ),
           InkWell(
             onTap: () {
-              showBottomSheet<void>(
+              showModalBottomSheet<void>(
                 context: context,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.only(
