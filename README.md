@@ -12,6 +12,9 @@
 <p align="center">
      <a href="https://www.behance.net/gallery/102261423/DROP-Online-Store-E-commerce?tracking_source=curated_galleries_ui-ux" target="_blank">Click here to go to the Actual Designs used</a>
 </p>
+<p align="center">
+     <a href="https://www.behance.net/slobodyanskystepan" target="_blank">Designed By Stepan Slobodiansky</a>
+</p>
 
 
 ![Screenshot](assets/screenshots/drop_cover.png)
