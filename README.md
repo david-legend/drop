@@ -16,6 +16,8 @@
      <a href="https://www.behance.net/slobodyanskystepan" target="_blank">Designed By Stepan Slobodiansky</a>
 </p>
 
+<a href="https://play.google.com/store/apps/details?id=com.davidcobbina.drop" target="_blank"><img src="assets/screenshots/playstore.png"/></a>
+
 
 ![Screenshot](assets/screenshots/drop_cover.png)
 
