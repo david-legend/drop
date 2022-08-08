@@ -25,12 +25,12 @@ class InterestScreen extends StatelessWidget {
           children: [
             Text(
               StringConst.LOOKING_FOR,
-              style: theme.textTheme.headline4,
+              style: theme.textTheme.headlineLarge,
             ),
             SpaceH16(),
             Text(
               StringConst.CHOOSE_INTEREST,
-              style: theme.textTheme.headline6,
+              style: theme.textTheme.headlineSmall,
             ),
             SpaceH16(),
             Wrap(
@@ -41,27 +41,27 @@ class InterestScreen extends StatelessWidget {
             Spacer(flex: 2),
             CustomButton(
               onPressed: () {
-                ExtendedNavigator.root.push(Routes.homeScreen);
+                AutoRouter.of(context).push(HomeScreenRoute());
               },
               height: Sizes.HEIGHT_60,
               borderRadiusGeometry: AppRadius.defaultButtonRadius,
               title: StringConst.DONE,
               color: AppColors.primaryColor,
-              textStyle: theme.textTheme.subtitle1.copyWith(
+              textStyle: theme.textTheme.titleLarge?.copyWith(
                 color: AppColors.white,
               ),
             ),
             SpaceH16(),
             CustomButton(
               onPressed: () {
-                ExtendedNavigator.root.push(Routes.homeScreen);
+                AutoRouter.of(context).push(HomeScreenRoute());
               },
               height: Sizes.HEIGHT_60,
               borderSide: Borders.defaultButtonBorder,
               borderRadiusGeometry: AppRadius.defaultButtonRadius,
               title: StringConst.SKIP,
               color: AppColors.white,
-              textStyle: theme.textTheme.subtitle1.copyWith(
+              textStyle: theme.textTheme.titleLarge?.copyWith(
                 color: AppColors.secondaryColor2,
               ),
             ),
@@ -79,7 +79,7 @@ class InterestScreen extends StatelessWidget {
       items.add(
         Pill(
           title: pillItems[index].title,
-          selectedBackgroundColor: pillItems[index].color,
+          selectedBackgroundColor: pillItems[index].color!,
         ),
       );
     }

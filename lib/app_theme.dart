@@ -18,7 +18,6 @@ class AppTheme {
       canvasColor: colorScheme.background,
       scaffoldBackgroundColor: colorScheme.background,
       highlightColor: Colors.transparent,
-      accentColor: colorScheme.primary,
       visualDensity: VisualDensity.adaptivePlatformDensity,
       focusColor: AppColors.primaryColor,
     );
@@ -26,9 +25,7 @@ class AppTheme {
 
   static const ColorScheme lightColorScheme = ColorScheme(
     primary: AppColors.primaryColor,
-    primaryVariant: AppColors.secondaryColor,
     secondary: AppColors.accentPrimaryColor,
-    secondaryVariant: AppColors.accentPrimaryColor,
     background: Colors.white,
     surface: Color(0xFFFAFBFB),
     onBackground: AppColors.white100,
@@ -48,89 +45,82 @@ class AppTheme {
   static const _light = FontWeight.w300;
 
   static final TextTheme _textTheme = TextTheme(
-    headline1: TextStyle(
+    displayLarge: TextStyle(
       fontFamily: StringConst.FONT_FAMILY,
       fontSize: Sizes.TEXT_SIZE_96,
       color: AppColors.primaryText,
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
-    headline2: TextStyle(
+    displayMedium: TextStyle(
       fontFamily: StringConst.FONT_FAMILY,
       fontSize: Sizes.TEXT_SIZE_60,
       color: AppColors.primaryText,
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
-    headline3: TextStyle(
+    displaySmall: TextStyle(
       fontFamily: StringConst.FONT_FAMILY,
       fontSize: Sizes.TEXT_SIZE_48,
       color: AppColors.primaryText,
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
-    headline4: TextStyle(
+    headlineLarge: TextStyle(
       fontFamily: StringConst.FONT_FAMILY,
       fontSize: Sizes.TEXT_SIZE_34,
       color: AppColors.primaryText,
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
-    headline5: TextStyle(
+    headlineMedium: TextStyle(
       fontFamily: StringConst.FONT_FAMILY,
       fontSize: Sizes.TEXT_SIZE_24,
       color: AppColors.primaryText,
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
-    headline6: TextStyle(
+    headlineSmall: TextStyle(
       fontFamily: StringConst.FONT_FAMILY,
       fontSize: Sizes.TEXT_SIZE_20,
       color: AppColors.primaryText,
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
-    subtitle1: TextStyle(
+    titleLarge: TextStyle(
       fontFamily: StringConst.FONT_FAMILY,
       fontSize: Sizes.TEXT_SIZE_16,
       color: AppColors.primaryText,
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
-    subtitle2: TextStyle(
+    titleMedium: TextStyle(
       fontFamily: StringConst.FONT_FAMILY,
       fontSize: Sizes.TEXT_SIZE_14,
       color: AppColors.primaryText,
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
-    bodyText1: TextStyle(
+    bodyLarge: TextStyle(
       fontFamily: StringConst.FONT_FAMILY,
       fontSize: Sizes.TEXT_SIZE_16,
       color: AppColors.primaryText,
       fontWeight: _regular,
       fontStyle: FontStyle.normal,
     ),
-    bodyText2: TextStyle(
+    bodyMedium: TextStyle(
       fontFamily: StringConst.FONT_FAMILY,
       fontSize: Sizes.TEXT_SIZE_14,
       color: AppColors.primaryText,
       fontWeight: _light,
       fontStyle: FontStyle.normal,
     ),
-    button: TextStyle(
+    bodySmall: TextStyle(
       fontFamily: StringConst.FONT_FAMILY,
       fontSize: Sizes.TEXT_SIZE_14,
       color: AppColors.primaryText,
       fontStyle: FontStyle.normal,
       fontWeight: _regular,
-    ),
-    caption: TextStyle(
-      fontFamily: StringConst.FONT_FAMILY,
-      fontSize: Sizes.TEXT_SIZE_12,
-      color: AppColors.primaryText,
-      fontWeight: _regular,
-      fontStyle: FontStyle.normal,
     ),
   );
 }

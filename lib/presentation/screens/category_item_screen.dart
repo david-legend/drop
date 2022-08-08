@@ -14,7 +14,7 @@ class CategoryItemScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<ProductItem> products = Data.productCategories[category];
+    List<ProductItem> products = Data.productCategories[category]!;
     return Scaffold(
       body: Container(
         child: ListView(
@@ -49,11 +49,8 @@ class CategoryItemScreen extends StatelessWidget {
                   price: products[index].price,
                   imagePath: products[index].imagePath,
                   onTap: () {
-                    ExtendedNavigator.root.push(
-                      Routes.productScreen,
-                      arguments: ProductScreenArguments(
-                        product: products[index],
-                      ),
+                    AutoRouter.of(context).push(
+                      ProductScreenRoute(product: products[index]),
                     );
                   },
                 );

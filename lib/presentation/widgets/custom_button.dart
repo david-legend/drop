@@ -18,16 +18,16 @@ class CustomButton extends StatelessWidget {
     this.hasIcon = false,
   });
 
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
   final double height;
   final double elevation;
   final double borderRadius;
-  final BorderRadiusGeometry borderRadiusGeometry;
-  final String title;
+  final BorderRadiusGeometry? borderRadiusGeometry;
+  final String? title;
   final Color color;
   final BorderSide borderSide;
-  final TextStyle textStyle;
-  final Widget icon;
+  final TextStyle? textStyle;
+  final Widget? icon;
   final bool hasIcon;
 
   @override
@@ -45,11 +45,11 @@ class CustomButton extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          hasIcon ? icon : Container(),
-          hasIcon ? SpaceW8() : Container(),
+          icon != null ? icon! : Container(),
+          icon != null ? SpaceW8() : Container(),
           title != null
               ? Text(
-                  title,
+                  title!,
                   style: textStyle,
                 )
               : Container(

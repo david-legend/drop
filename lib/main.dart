@@ -6,21 +6,20 @@ import 'package:flutter/material.dart';
 import 'app_theme.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(DropApp());
 }
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+class DropApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    final _appRouter = AppRouter();
+
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      title: StringConst.APP_NAME,
       theme: AppTheme.lightThemeData,
-      builder: ExtendedNavigator<AppRouter>(
-        router: AppRouter(),
-        initialRoute: Routes.splashScreen,
-      ),
+      title: StringConst.APP_NAME,
+      routerDelegate: _appRouter.delegate(),
+      routeInformationParser: _appRouter.defaultRouteParser(),
     );
   }
 }

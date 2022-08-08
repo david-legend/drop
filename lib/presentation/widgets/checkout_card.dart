@@ -10,10 +10,10 @@ class CheckOutItem {
   final String imagePath;
 
   CheckOutItem({
-    @required this.title,
-    @required this.quantity,
-    @required this.price,
-    @required this.imagePath,
+    required this.title,
+    required this.quantity,
+    required this.price,
+    required this.imagePath,
   });
 }
 
@@ -22,17 +22,17 @@ class CheckOutCard extends StatelessWidget {
   final String quantity;
   final String price;
   final String imagePath;
-  final double width;
+  final double? width;
   final double height;
   final double widthOfImage;
   final Color backgroundColor;
-  final BorderRadiusGeometry borderRadius;
+  final BorderRadius? borderRadius;
 
   CheckOutCard({
-    @required this.title,
-    @required this.quantity,
-    @required this.price,
-    @required this.imagePath,
+    required this.title,
+    required this.quantity,
+    required this.price,
+    required this.imagePath,
     this.width,
     this.height = Sizes.HEIGHT_100,
     this.widthOfImage = Sizes.WIDTH_150,
@@ -95,14 +95,14 @@ class CheckOutCard extends StatelessWidget {
                   children: [
                     Text(
                       price,
-                      style: theme.textTheme.subtitle1.copyWith(
+                      style: theme.textTheme.titleLarge?.copyWith(
                         fontSize: Sizes.TEXT_SIZE_20,
                       ),
                     ),
                     Spacer(),
                     Text(
                       quantity,
-                      style: theme.textTheme.subtitle1.copyWith(
+                      style: theme.textTheme.titleLarge?.copyWith(
                         color: AppColors.secondaryColor2,
                       ),
                     ),

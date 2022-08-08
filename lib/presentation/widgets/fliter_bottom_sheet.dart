@@ -12,8 +12,8 @@ class BrandItem {
   final Color color;
 
   BrandItem({
-    @required this.brand,
-    @required this.imagePath,
+    required this.brand,
+    required this.imagePath,
     this.color = AppColors.accentPurpleColor,
   });
 }
@@ -24,8 +24,8 @@ class FilterBottomSheet extends StatefulWidget {
   final List<Color> colors;
 
   FilterBottomSheet({
-    @required this.brands,
-    @required this.colors,
+    required this.brands,
+    required this.colors,
   });
 
   @override
@@ -40,11 +40,11 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
   @override
   Widget build(BuildContext context) {
     ThemeData theme = Theme.of(context);
-    TextStyle selectedStyle = theme.textTheme.subtitle1.copyWith(
+    TextStyle? selectedStyle = theme.textTheme.titleLarge?.copyWith(
       color: AppColors.white,
     );
 
-    TextStyle unSelectedStyle = theme.textTheme.subtitle1.copyWith(
+    TextStyle? unSelectedStyle = theme.textTheme.titleLarge?.copyWith(
       color: AppColors.secondaryColor2,
     );
 
@@ -65,14 +65,14 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
             Center(
               child: Text(
                 StringConst.FILTER,
-                style: theme.textTheme.headline4,
+                style: theme.textTheme.headlineLarge,
               ),
             ),
             SpaceH16(),
             Center(
               child: Text(
                 StringConst.PRICE,
-                style: theme.textTheme.headline6,
+                style: theme.textTheme.headlineSmall,
               ),
             ),
             SpaceH16(),
@@ -81,7 +81,7 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
                 activeTrackColor: AppColors.primaryColor,
                 inactiveTrackColor: AppColors.secondaryColor2,
                 thumbColor: AppColors.accentPurpleColor,
-                valueIndicatorTextStyle: theme.textTheme.bodyText1,
+                valueIndicatorTextStyle: theme.textTheme.bodyLarge,
                 valueIndicatorColor: AppColors.secondaryColor,
                 disabledThumbColor: AppColors.accentYellowColor,
               ),
@@ -105,7 +105,7 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
             Center(
               child: Text(
                 StringConst.GENDER,
-                style: theme.textTheme.headline6,
+                style: theme.textTheme.headlineSmall,
               ),
             ),
             SpaceH24(),
@@ -155,7 +155,7 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
             Center(
               child: Text(
                 StringConst.BRAND,
-                style: theme.textTheme.headline6,
+                style: theme.textTheme.headlineSmall,
               ),
             ),
             SpaceH24(),
@@ -195,7 +195,7 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
             Center(
               child: Text(
                 StringConst.COLOR,
-                style: theme.textTheme.headline6,
+                style: theme.textTheme.headlineSmall,
               ),
             ),
             SpaceH24(),
@@ -230,8 +230,8 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
   }
 
   void flipGender({
-    bool maleState,
-    bool femaleState,
+    bool? maleState,
+    bool? femaleState,
   }) {
     if (maleState != null && maleState == false) {
       setState(() {

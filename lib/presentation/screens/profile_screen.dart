@@ -25,27 +25,27 @@ class ProfileScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(StringConst.PROFILE, style: theme.textTheme.headline4),
+            Text(StringConst.PROFILE, style: theme.textTheme.headlineLarge),
             SpaceH16(),
-            Text(StringConst.USERNAME_2, style: theme.textTheme.headline5),
+            Text(StringConst.USERNAME_2, style: theme.textTheme.headlineMedium),
             SpaceH4(),
             Text(
               StringConst.USERNAME_EMAIL,
-              style: theme.textTheme.subtitle1.copyWith(
+              style: theme.textTheme.titleLarge?.copyWith(
                 color: AppColors.secondaryColor2,
               ),
             ),
             SpaceH4(),
             Text(
               StringConst.USER_LOCATION,
-              style: theme.textTheme.subtitle1.copyWith(
+              style: theme.textTheme.titleLarge?.copyWith(
                 color: AppColors.secondaryColor2,
               ),
             ),
             SpaceH16(),
             ..._buildListTile(context: context, data: Data.userData),
             Spacer(),
-            Text(StringConst.CONTACT_US, style: theme.textTheme.headline5),
+            Text(StringConst.CONTACT_US, style: theme.textTheme.headlineMedium),
             SpaceH16(),
             Wrap(
               spacing: 8,
@@ -57,13 +57,13 @@ class ProfileScreen extends StatelessWidget {
             Spacer(flex: 2),
             CustomButton(
               onPressed: () {
-                ExtendedNavigator.root.pop();
+                AutoRouter.of(context).pop();
               },
               height: Sizes.HEIGHT_60,
               borderRadiusGeometry: AppRadius.defaultButtonRadius,
               title: StringConst.EXIT,
               color: AppColors.primaryColor,
-              textStyle: theme.textTheme.subtitle1.copyWith(
+              textStyle: theme.textTheme.titleLarge?.copyWith(
                 color: AppColors.white,
               ),
             ),
@@ -75,8 +75,8 @@ class ProfileScreen extends StatelessWidget {
   }
 
   List<Widget> _buildListTile({
-    @required BuildContext context,
-    @required List<String> data,
+    required BuildContext context,
+    required List<String> data,
   }) {
     List<Widget> items = [];
     TextTheme textTheme = Theme.of(context).textTheme;
@@ -89,7 +89,7 @@ class ProfileScreen extends StatelessWidget {
             left: Sizes.PADDING_0,
             right: Sizes.PADDING_24,
           ),
-          title: Text(data[index], style: textTheme.subtitle1),
+          title: Text(data[index], style: textTheme.titleLarge),
           trailing: Icon(FeatherIcons.chevronRight),
         ),
       );
@@ -99,20 +99,18 @@ class ProfileScreen extends StatelessWidget {
   }
 
   List<Widget> _buildSocialIcons({
-    @required BuildContext context,
-    @required List<SocialItem> socialItems,
+    required BuildContext context,
+    required List<SocialItem> socialItems,
   }) {
     List<Widget> items = [];
     double padding = (kPadding * 2);
     double spacing = kSpacing * 3;
     double subs = padding + spacing;
-    double width = assignWidth(context: context, fraction: 1, subs: subs) /
-        (socialItems.length * 2);
     for (int index = 0; index < socialItems.length; index++) {
       items.add(
         RoundedContainer(
           iconData: socialItems[index].iconData,
-          backgroundColor: socialItems[index].backgroundColor,
+          backgroundColor: socialItems[index].backgroundColor!,
           width: 60,
           height: 60,
         ),

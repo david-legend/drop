@@ -18,9 +18,8 @@ class _SplashScreenState extends State<SplashScreen> {
 
   void run() {
     Future.delayed(Duration(milliseconds: 1000), () {
-      ExtendedNavigator.root.pushAndRemoveUntil(
-        Routes.authScreen,
-        (Route<dynamic> route) => false,
+      AutoRouter.of(context).push(
+        AuthScreenRoute(),
       );
     });
   }

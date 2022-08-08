@@ -21,29 +21,29 @@ class Data {
     PillItem(title: StringConst.OFF_WHITE, color: AppColors.accentYellowColor),
   ];
 
-  static List<MenuItem> menuItems = [
-    MenuItem(
+  static List<DropMenuItem> menuItems = [
+    DropMenuItem(
       title: StringConst.HOME,
       textColor: AppColors.accentPurpleColor,
-      routeName: Routes.homeScreen,
+      route: HomeScreenRoute(),
     ),
-    MenuItem(
+    DropMenuItem(
       title: StringConst.CATEGORIES,
       textColor: AppColors.accentOrangeColor,
-      routeName: Routes.categoriesScreen,
+      route: CategoriesScreenRoute(),
     ),
-    MenuItem(
+    DropMenuItem(
       title: StringConst.NEW_IN,
       textColor: AppColors.accentPinkColor,
     ),
-    MenuItem(
+    DropMenuItem(
       title: StringConst.SALE,
       textColor: AppColors.accentYellowColor,
     ),
-    MenuItem(
+    DropMenuItem(
       title: StringConst.PROFILE,
       textColor: AppColors.accentDarkGreenColor,
-      routeName: Routes.profileScreen,
+      route: ProfileScreenRoute(),
     ),
   ];
 

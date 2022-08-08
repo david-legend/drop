@@ -2,7 +2,6 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:drop/presentation/layout/adaptive.dart';
 import 'package:drop/presentation/widgets/custom_appbar.dart';
 import 'package:drop/presentation/widgets/custom_button.dart';
-import 'package:drop/presentation/widgets/drop_appbar.dart';
 import 'package:drop/presentation/widgets/product_card.dart';
 import 'package:drop/presentation/widgets/section_heading_2.dart';
 import 'package:drop/presentation/widgets/rounded_container.dart';
@@ -22,9 +21,9 @@ class ProductScreen extends StatefulWidget {
 }
 
 class _ProductScreenState extends State<ProductScreen> {
-  List<SelectorModel> sizes;
-  double currentIndexPage;
-  int pageLength;
+  late List<SelectorModel> sizes;
+  late double currentIndexPage;
+  late int pageLength;
 
   @override
   void initState() {
@@ -83,20 +82,20 @@ class _ProductScreenState extends State<ProductScreen> {
             Center(
               child: Text(
                 widget.product.title,
-                style: theme.textTheme.headline4,
+                style: theme.textTheme.headlineLarge,
               ),
             ),
             Center(
               child: Text(
                 "\"${widget.product.tag}\"",
-                style: theme.textTheme.headline4,
+                style: theme.textTheme.headlineLarge,
               ),
             ),
             SpaceH8(),
             Center(
               child: Text(
                 "${widget.product.price} ${StringConst.CURRENCY}",
-                style: theme.textTheme.headline5.copyWith(
+                style: theme.textTheme.headlineMedium?.copyWith(
                   fontSize: Sizes.TEXT_SIZE_28,
                 ),
               ),
@@ -106,7 +105,7 @@ class _ProductScreenState extends State<ProductScreen> {
               padding: const EdgeInsets.symmetric(horizontal: Sizes.PADDING_24),
               child: SectionHeading2(
                 title1: StringConst.SIZES,
-                title1TextStyle: theme.textTheme.headline6,
+                title1TextStyle: theme.textTheme.headlineSmall,
                 title2: StringConst.SIZE_GUIDE,
               ),
             ),
@@ -156,7 +155,7 @@ class _ProductScreenState extends State<ProductScreen> {
                       height: Sizes.HEIGHT_60,
                       borderRadiusGeometry: AppRadius.defaultButtonRadius,
                       title: StringConst.ADD_TO_CART,
-                      textStyle: theme.textTheme.subtitle1.copyWith(
+                      textStyle: theme.textTheme.titleLarge?.copyWith(
                         color: AppColors.white,
                       ),
                     ),
@@ -196,18 +195,6 @@ class _ProductScreenState extends State<ProductScreen> {
         ),
       ),
     );
-  }
-
-  List<Widget> _buildSizes(List<SelectorModel> sizes) {
-    List<Widget> items = [];
-    for (int index = 0; index < sizes.length; index++) {
-      items.add(
-        SelectableContainer(
-          model: sizes[index],
-        ),
-      );
-    }
-    return items;
   }
 
   List<Widget> _buildProductImages(List<String> imageList) {

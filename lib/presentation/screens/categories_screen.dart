@@ -43,16 +43,12 @@ class CategoriesScreen extends StatelessWidget {
                 itemBuilder: (BuildContext context, int index) {
                   return CategoryCard(
                     title: Data.categoryItems[index].title,
-                    subtitle: Data.categoryItems[index].subtitle,
-                    subtitleColor: Data.categoryItems[index].subtitleColor,
+                    subtitle: Data.categoryItems[index].subtitle!,
+                    subtitleColor: Data.categoryItems[index].subtitleColor!,
                     imagePath: Data.categoryItems[index].imagePath,
                     onTap: () {
-                      ExtendedNavigator.root.push(
-                        Routes.categoryItemScreen,
-                        arguments: CategoryItemScreenArguments(
-                          category: Data.categoryItems[index].title,
-                        ),
-                      );
+                      AutoRouter.of(context).push(CategoryItemScreenRoute(category: Data.categoryItems[index].title));
+
                     },
                   );
                 },

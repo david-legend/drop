@@ -9,12 +9,12 @@ import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'drop_logo.dart';
 import 'fliter_bottom_sheet.dart';
 
-class MenuItem {
-  MenuItem({@required this.title, this.textColor, this.routeName});
+class DropMenuItem {
+  DropMenuItem({required this.title, this.textColor, this.route});
 
   final String title;
-  final Color textColor;
-  final String routeName;
+  final Color? textColor;
+  final PageRouteInfo? route;
 }
 
 class DropAppBar extends StatelessWidget {
@@ -23,12 +23,11 @@ class DropAppBar extends StatelessWidget {
     this.onLeadingTap,
   });
 
-  final Widget leading;
-  final GestureTapCallback onLeadingTap;
+  final Widget? leading;
+  final GestureTapCallback? onLeadingTap;
 
   @override
   Widget build(BuildContext context) {
-    ThemeData theme = Theme.of(context);
     return Container(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -100,8 +99,8 @@ class PanCakeIcon extends StatelessWidget {
 class TrailingIcons extends StatelessWidget {
   TrailingIcons({this.width, this.height});
 
-  final double width;
-  final double height;
+  final double? width;
+  final double? height;
 
   @override
   Widget build(BuildContext context) {
@@ -164,7 +163,7 @@ class TrailingIcons extends StatelessWidget {
           ),
           InkWell(
             onTap: () {
-              ExtendedNavigator.root.push(Routes.checkOutScreen);
+              AutoRouter.of(context).push(CheckOutScreenRoute());
             },
             child: Container(
               padding: EdgeInsets.all(Sizes.PADDING_8),

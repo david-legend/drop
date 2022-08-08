@@ -6,12 +6,12 @@ import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 
 class ProductItem {
   ProductItem({
-    @required this.title,
-    @required this.price,
-    @required this.imagePath,
-    @required this.images,
-    @required this.sizes,
-    @required this.tag,
+    required this.title,
+    required this.price,
+    required this.imagePath,
+    required this.images,
+    required this.sizes,
+    required this.tag,
   });
 
   final String title;
@@ -24,9 +24,9 @@ class ProductItem {
 
 class ProductCard extends StatelessWidget {
   ProductCard({
-    this.title,
-    this.price,
-    this.imagePath,
+    required this.title,
+    required this.price,
+    required this.imagePath,
     this.icon = FeatherIcons.heart,
     this.backgroundColor = AppColors.secondaryColor,
     this.borderRadius = const BorderRadius.only(
@@ -42,7 +42,7 @@ class ProductCard extends StatelessWidget {
   final IconData icon;
   final BorderRadiusGeometry borderRadius;
   final Color backgroundColor;
-  final GestureTapCallback onTap;
+  final GestureTapCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -95,13 +95,13 @@ class ProductCard extends StatelessWidget {
                 children: [
                   Text(
                     title,
-                    style: theme.textTheme.subtitle1.copyWith(
+                    style: theme.textTheme.titleLarge?.copyWith(
                       fontSize: Sizes.TEXT_SIZE_20,
                     ),
                   ),
                   Text(
                     "$price ${StringConst.CURRENCY}",
-                    style: theme.textTheme.subtitle1,
+                    style: theme.textTheme.titleLarge,
                   ),
                 ],
               ),

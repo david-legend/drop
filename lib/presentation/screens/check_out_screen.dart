@@ -1,4 +1,3 @@
-import 'dart:ffi';
 
 import 'package:drop/presentation/layout/adaptive.dart';
 import 'package:drop/presentation/widgets/checkout_card.dart';
@@ -88,12 +87,13 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                       Data.checkOutItems.removeAt(index);
                     });
 
+
                     Scaffold.of(context).showSnackBar(
                       SnackBar(
                         backgroundColor: AppColors.primaryColor,
                         content: Text(
                           "$item ${StringConst.REMOVED}",
-                          style: theme.textTheme.subtitle1.copyWith(
+                          style: theme.textTheme.titleLarge?.copyWith(
                             color: AppColors.accentOrangeColor,
                           ),
                         ),
@@ -149,7 +149,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                 children: [
                   Text(
                     StringConst.TOTAL,
-                    style: theme.textTheme.subtitle1.copyWith(
+                    style: theme.textTheme.titleLarge?.copyWith(
                       color: AppColors.secondaryColor2,
                       fontSize: Sizes.TEXT_SIZE_18,
                     ),
@@ -157,7 +157,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                   Spacer(),
                   Text(
                     "$totalPrice",
-                    style: theme.textTheme.headline6.copyWith(
+                    style: theme.textTheme.headlineSmall?.copyWith(
                       fontSize: Sizes.TEXT_SIZE_24,
                     ),
                   ),
@@ -172,7 +172,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                 child: CustomButton(
                   onPressed: () {},
                   title: StringConst.CHECK_OUT,
-                  textStyle: theme.textTheme.subtitle1.copyWith(
+                  textStyle: theme.textTheme.titleLarge?.copyWith(
                     color: AppColors.white,
                   ),
                   height: Sizes.HEIGHT_60,

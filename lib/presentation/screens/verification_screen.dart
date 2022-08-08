@@ -2,10 +2,10 @@ import 'package:auto_route/auto_route.dart';
 import 'package:drop/presentation/routes/router.gr.dart';
 import 'package:drop/presentation/widgets/custom_appbar.dart';
 import 'package:drop/presentation/widgets/custom_button.dart';
-import 'package:drop/presentation/widgets/otp_text_field.dart';
 import 'package:drop/presentation/widgets/spaces.dart';
 import 'package:drop/values/values.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 
 class VerificationScreen extends StatefulWidget {
   @override
@@ -16,7 +16,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
   @override
   Widget build(BuildContext context) {
     ThemeData theme = Theme.of(context);
-    List<TextStyle> otpTextStyles = [
+    List<TextStyle?> otpTextStyles = [
       createStyle(AppColors.accentPurpleColor),
       createStyle(AppColors.accentYellowColor),
       createStyle(AppColors.accentDarkGreenColor),
@@ -38,14 +38,14 @@ class _VerificationScreenState extends State<VerificationScreen> {
           children: [
             Text(
               StringConst.VERIFICATION_CODE,
-              style: theme.textTheme.headline4,
+              style: theme.textTheme.headlineLarge,
             ),
             SpaceH16(),
             Text(
               StringConst.VERIFICATION_TEXT,
-              style: theme.textTheme.headline6,
+              style: theme.textTheme.headlineSmall,
             ),
-            Text(StringConst.ENTER_CODE, style: theme.textTheme.headline6),
+            Text(StringConst.ENTER_CODE, style: theme.textTheme.headlineSmall),
             Spacer(flex: 2),
             OtpTextField(
               numberOfFields: 6,
@@ -64,26 +64,26 @@ class _VerificationScreenState extends State<VerificationScreen> {
                 child: Text(
                   StringConst.VERIFICATION_DESCRIPTION,
                   textAlign: TextAlign.center,
-                  style: theme.textTheme.bodyText1,
+                  style: theme.textTheme.bodyLarge,
                 ),
               ),
             ),
             Center(
               child: Text(
                 StringConst.NO_CODE,
-                style: theme.textTheme.subtitle1,
+                style: theme.textTheme.titleLarge,
               ),
             ),
             Spacer(flex: 3),
             CustomButton(
               onPressed: () {
-                ExtendedNavigator.root.push(Routes.interestScreen);
+                AutoRouter.of(context).push(InterestScreenRoute());
               },
               height: Sizes.HEIGHT_60,
               borderRadiusGeometry: AppRadius.defaultButtonRadius,
               title: StringConst.CONFIRM,
               color: AppColors.primaryColor,
-              textStyle: theme.textTheme.subtitle1.copyWith(
+              textStyle: theme.textTheme.titleLarge?.copyWith(
                 color: AppColors.white,
               ),
             ),
@@ -94,8 +94,8 @@ class _VerificationScreenState extends State<VerificationScreen> {
     );
   }
 
-  TextStyle createStyle(Color color) {
+  TextStyle? createStyle(Color color) {
     ThemeData theme = Theme.of(context);
-    return theme.textTheme.headline3.copyWith(color: color);
+    return theme.textTheme.displaySmall?.copyWith(color: color);
   }
 }

@@ -1,4 +1,4 @@
-import 'package:auto_route/auto_route_annotations.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:drop/presentation/screens/check_out_screen.dart';
 import 'package:drop/presentation/screens/profile_screen.dart';
 import 'package:drop/presentation/screens/auth_screen.dart';

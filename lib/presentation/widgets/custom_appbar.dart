@@ -15,19 +15,20 @@ class CustomAppBar extends StatelessWidget {
     this.trailingColor,
     this.leading,
     this.onLeadingTap,
-  });
+  }) : assert((hasTitle == false && title == null) ||
+            (hasTitle == true && title != null));
 
-  final GestureTapCallback onLeadingTap;
-  final GestureTapCallback onActionTap;
-  final List<Widget> trailing;
-  final Widget leading;
+  final GestureTapCallback? onLeadingTap;
+  final GestureTapCallback? onActionTap;
+  final List<Widget>? trailing;
+  final Widget? leading;
   final Color color;
-  final Color leadingColor;
-  final Color trailingColor;
+  final Color? leadingColor;
+  final Color? trailingColor;
   final bool hasLeading;
   final bool hasTrailing;
   final bool hasTitle;
-  final String title;
+  final String? title;
 
   @override
   Widget build(BuildContext context) {
@@ -35,12 +36,12 @@ class CustomAppBar extends StatelessWidget {
     return AppBar(
       elevation: 0.0,
       backgroundColor: color,
-      leading: hasLeading ? (leading ?? defaultLeading()) : null,
+      leading: hasLeading ? (leading ?? defaultLeading(context)) : null,
       centerTitle: true,
       title: hasTitle
           ? Text(
-              title,
-              style: theme.textTheme.subtitle1,
+              title!,
+              style: theme.textTheme.titleLarge,
             )
           : null,
       actions: hasTrailing ? (trailing ?? defaultTrailing()) : null,
@@ -62,11 +63,11 @@ class CustomAppBar extends StatelessWidget {
     ];
   }
 
-  Widget defaultLeading() {
+  Widget defaultLeading(BuildContext context) {
     return InkWell(
       onTap: onLeadingTap ??
           () {
-            ExtendedNavigator.root.pop();
+            AutoRouter.of(context).pop();
           },
       child: Padding(
         padding: const EdgeInsets.only(left: Sizes.PADDING_16),
